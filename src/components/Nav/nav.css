@@ -1,0 +1,355 @@
+.circle-nav {
+  height: 45px;
+  width: 45px;
+  background-color: tomato;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 10px;
+  margin-top: 12px;
+  margin-right: 20px;
+}
+
+
+.logo-text {
+  font-weight: 800;
+  color: #373636;
+  text-shadow: 3px 3px 0 #1d1d1d1d, 6px 6px 0 #1d1d1d,
+    9px 9px #1d1d1d, 12px 12px 0 #1d1d1d;
+
+
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  animation: shadows 10.2s ease-in infinite;
+  letter-spacing: 0.4rem;
+}
+
+
+@keyframes shadows {
+  0% {
+    text-shadow: none;
+  }
+
+  10% {
+    transform: translate(-3px, -3px);
+    text-shadow: 3px 3px 0 #676363;
+  }
+
+  20% {
+    transform: translate(-6px, -6px);
+    text-shadow: 3px 3px 0 #525050,
+      6px 6px 0 #6a6666;
+  }
+
+  30% {
+    transform: translate(-9px, -9px);
+    text-shadow: 3px 3px 0 #6b6868,
+      6px 6px 0 #626060, 9px 9px #696767;
+  }
+
+  40% {
+    transform: translate(-12px, -12px);
+    text-shadow: 3px 3px 0 #666262,
+      6px 6px 0 #676363, 9px 9px #6b6969,
+      12px 12px 0 #655f5f;
+  }
+
+  50% {
+    transform: translate(-12px, -12px);
+    text-shadow: 3px 3px 0 #6c6767,
+      6px 6px 0 #685c5c, 9px 9px #6d6666,
+      12px 12px 0 #6c6363;
+  }
+
+  60% {
+    text-shadow: 3px 3px 0 #675e5e,
+      6px 6px 0 #6b6060, 9px 9px #706969,
+      12px 12px 0 #6c6464;
+  }
+
+  70% {
+    text-shadow: 3px 3px 0 #696060,
+      6px 6px 0 #645c5c, 9px 9px #6e6363;
+  }
+
+  80% {
+    text-shadow: 3px 3px 0 #645e5e,
+      6px 6px 0 #6b6262;
+  }
+
+  90% {
+    text-shadow: 3px 3px 0 #6d6464;
+  }
+
+  100% {
+    text-shadow: none;
+  }
+}
+
+/*==============================================================================*/
+
+
+
+
+
+
+
+
+.container-fluid {
+  margin-top: 30px;
+}
+
+#Nav-container {
+  color: var(--color-text);
+  background-color: transparent;
+  font-family: 'Rubik', sans-serif;
+  position: absolute;
+
+
+}
+
+a#Nav-container :hover {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: none;
+
+  transform: none !important;
+  transition: none !important;
+  background-color: none;
+
+
+}
+
+a.Nav-Link.nav-link {
+  color: var(--color-text);
+  font-family: 'Rubik', sans-serif;
+}
+
+ul.mr-auto.navbar-nav {
+  border-bottom: none;
+}
+
+li.nav-item {
+  border-top: none;
+}
+
+ul.mr-auto.navbar-nav {
+
+  justify-content: space-between;
+  width: 25.5rem;
+
+}
+
+
+
+
+
+
+.navigation {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.5rem 0rem;
+  background-color: transparent;
+  color: var(--color-text);
+
+}
+
+/*============= brand name ===============*/
+.brand-name {
+  text-decoration: none;
+  color: black;
+  font-size: 1.3rem;
+  margin-left: 1rem;
+}
+
+.navigation-menu {
+  margin-left: auto;
+}
+
+.navigation-menu ul {
+  display: flex;
+  padding: 0;
+}
+
+.navigation-menu li {
+  /*removes default disc bullet for li tags and applies margin to left & right side*/
+  list-style-type: none;
+  margin: 0 1rem;
+}
+
+.navigation-menu li a {
+  /* // increases the surface area of the anchor tag to span more than just the anchor text */
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+.hamburger {
+  /* // removes default border on button element */
+  border: 0;
+  height: 40px;
+  width: 40px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  /* // positions the icon to the right and center aligns it vertically */
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+  display: none;
+}
+
+.hamburger:hover {
+  background-color: var(--color-offwhite);
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navigation-menu ul {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  div#Nav-container {
+    position: relative;
+    width: 90%;
+  }
+
+  .navigation-menu ul {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    flex-direction: column;
+    width: 110%;
+    height: calc(100vh - 77px);
+    background-color: white;
+    border-top: 1px solid black;
+    left: -17px;
+
+  }
+
+  .navigation-menu li {
+    /* // centers link text and strips off margin */
+    text-align: center;
+    margin: 0;
+  }
+
+  .navigation-menu li a {
+    color: black;
+    /* // increases the surface area of the anchor tag to span the full width of the menu */
+    width: 100%;
+    padding: 1.5rem 0;
+  }
+
+  .navigation-menu li:hover {
+    background-color: #eee;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navigation-menu ul {
+    /* previous styles */
+    display: none;
+  }
+}
+
+div#Nav-container {
+  width: 80%;
+  display: flex;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .circle-nav {
+    display: none;
+  }
+
+
+  span.tag-nav {
+    display: flex;
+    width: 300px;
+  }
+
+
+  .navigation-menu.expanded ul {
+    display: block;
+
+  }
+
+  .hamburger {
+    display: block;
+    width: 30px;
+    background-color: transparent !important;
+    height: 30px;
+
+  }
+
+  .navigation {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0.5rem 5rem;
+    color: var(--color-text);
+
+    /* justify-content: flex-end; */
+  }
+
+  button.navbar-toggler {
+    display: contents;
+
+  }
+
+  span.navbar-toggler-icon {
+    background-color: var(--color-red);
+    border-radius: 25px;
+    background-image: none;
+    z-index: 999;
+    width: 45px;
+    height: 45px;
+
+  }
+
+  a.Nav-Link.nav-link {
+    color: var(--color-text);
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+  }
+
+  ul.mr-auto.navbar-nav {
+    border-bottom: solid 0.5px #1d1d1d8f;
+  }
+
+  li.nav-item {
+    border-top: solid 0.5px #1d1d1d89;
+  }
+
+  li.nav-item :hover {
+    background-color: var(--color-red);
+    color: var(--color-offwhite);
+
+
+  }
+
+  ul.mr-auto.navbar-nav {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
