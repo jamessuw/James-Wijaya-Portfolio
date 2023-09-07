@@ -69,6 +69,12 @@ transition: 0.3s;
     position: relative;
     text-align: end;
 
+
+  }
+
+  .box2 h2{
+font-size: 3rem;
+
   }
   .project-container {
     padding-top: 10px;
