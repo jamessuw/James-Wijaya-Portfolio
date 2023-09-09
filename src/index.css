@@ -220,6 +220,11 @@ section >h2 {
         
         pointer-events: auto;
     }
+/*============================= TExt animation Global animation ===============*/
+
+
+
+
 
   /*=========================== Media Queries (Medium Device) =================*/
   @media screen and (max-width :1024px){
