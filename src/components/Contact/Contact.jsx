@@ -1,19 +1,13 @@
 import "./contact.css";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import React, { Suspense } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
-import Model from './Model'; /* highlight-line */
-
-
-
-
-
-
+import React, { Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import Model from "./Model"; /* highlight-line */
 
 function Contact() {
-    const modelSrc = 'https://models.readyplayer.me/64c7b1af067a35dfd8b3de7f.glb';
+  const modelSrc = "https://models.readyplayer.me/64c7b1af067a35dfd8b3de7f.glb";
 
   const form = useRef();
 
@@ -30,7 +24,9 @@ function Contact() {
       .then(
         (result) => {
           console.log(result.text);
-          window.alert("Thank you. Message has been sent! James will be in touch soon :)"); // Display an alert window
+          window.alert(
+            "Thank you. Message has been sent! James will be in touch soon :)"
+          ); // Display an alert window
         },
         (error) => {
           console.log(error.text);
@@ -39,40 +35,29 @@ function Contact() {
     e.target.reset();
   };
 
-  
-
-
   return (
-    <section id="contact-section"> 
+    <section id="contact-section">
       <span className="heading-project">
-          {" "}
-          <h2>LET'S CONNECT &  GET TO KNOW<br></br> EACH OTHER</h2>
-        </span>
+        {" "}
+        <h2>
+          LET'S CONNECT & GET TO KNOW<br></br> EACH OTHER
+        </h2>
+      </span>
       <div className="container">
-       
         <div className="container-1">
-  
-  
           <div className="container-abstracts">
-        
-<div class='blob'>
+            <div class="blob"></div>
 
- 
-</div>
-
-<p className="tag-contact">
-    IM CURRENTLY OPEN FOR PROJETC <br></br>
-    FEEL FREE TO REACH OUT ILL CONTACT<br></br>AS
-    SOON AS I CAN THANK YOU
-  </p>
-        <div className="ball" id="ball-1"></div>
-                <div className="abstracts"></div>
-                <div className="ball"></div>
-     </div>
-
-       </div> 
-
-
+            <p className="tag-contact">
+              IM CURRENTLY OPEN FOR PROJETC <br></br>
+              FEEL FREE TO REACH OUT ILL CONTACT<br></br>AS SOON AS I CAN THANK
+              YOU
+            </p>
+            <div className="ball" id="ball-1"></div>
+            <div className="abstracts"></div>
+            <div className="ball"></div>
+          </div>
+        </div>
 
         <div className="container-1">
           <section>

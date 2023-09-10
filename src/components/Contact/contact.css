@@ -1,24 +1,27 @@
 /*===========Contact Form styling ===========*/
-#contact-section{
-background-color: #e0d9d9;
-border-top-left-radius: 60px 70px;
-border-top-right-radius: 60px 70px;
-box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
-height: 100vh;
-      
-    
+#contact-section {
+    background-color: #e0d9d9;
+    border-top-left-radius: 60px 70px;
+    border-top-right-radius: 60px 70px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    height: 100vh;
+
+
 }
-.heading-project{
+
+.heading-project {
     text-align: left;
 
-   
+
 }
-.heading-project h2{
+
+.heading-project h2 {
     font-size: 5rem;
     text-align: left;
     padding: 35px;
 
 }
+
 form.--form-control--crad {
     display: flex;
     flex-direction: column;
@@ -28,11 +31,11 @@ form.--form-control--crad {
 }
 
 input[type="text"] {
-        /* margin: 10px; */
-        height: 50px;
-        padding: 20px;
-        border-radius: 20px;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    /* margin: 10px; */
+    height: 50px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
     pointer-events: fill;
 
 }
@@ -43,7 +46,7 @@ input[type="text"] {
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
     pointer-events: fill;
-/* }
+    /* }
 .abstracts{
     display:flex;
     height: 500px;
@@ -61,16 +64,16 @@ input[type="text"] {
     background-color: orange;
 } */
 }
-  
-  .blob {
+
+.blob {
     height: 150px;
     width: 150px;
     border-radius: 58% 43% 33% 64% / 50% 38% 53% 50%;
     background: transparent;
     box-shadow: inset 6px 33px 20px 0 #c9c9c9, inset 20px 80px 15px 0 #e0e0e0, 10px 20px 20px 0px #c9c9c9;
-  }
-  
-  .blob::before {
+}
+
+.blob::before {
     content: '';
     position: relative;
     border-radius: 37% 54% 46% 46%;
@@ -80,33 +83,33 @@ input[type="text"] {
     height: 15px;
     top: 20px;
     left: 20px;
-  }
-  
-  .blob::after {
+}
+
+.blob::after {
     content: '';
     position: relative;
     border-radius: 50%;
     background: white;
-    width:10px;
+    width: 10px;
     height: 10px;
     top: 60px;
     left: 20px;
-  }
+}
 
-.container-abstracts{
+.container-abstracts {
     display: flex;
     flex-direction: column;
 }
- .container-abstract
-    div#ball-1{
+
+.container-abstract div#ball-1 {
 
 
- 
- 
+
+
     display: flex;
     justify-content: end;
 }
 
- .tag-contact{
+.tag-contact {
     font-size: 15px;
 }

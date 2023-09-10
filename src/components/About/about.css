@@ -1,37 +1,37 @@
-.avatar-3D{
-  
-        display: block;
-        
-        
+.avatar-3D {
+
+    display: block;
+
+
 }
 
 section#About-section {
-        background-color: #eeebeb;
-        border-top-left-radius: 60px 70px;
-        border-top-right-radius: 60px 70px;
-        box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
-/* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
-        height: 100vh;
-        padding: 100px;
-    }
+    background-color: #eeebeb;
+    border-top-left-radius: 60px 70px;
+    border-top-right-radius: 60px 70px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
+    height: 100vh;
+    padding: 100px;
+}
 
-#image-about{
+#image-about {
     display: block;
     height: 500px;
     border-radius: 5px;
 }
-.about-text{
+
+.about-text {
     display: flex;
-    font-Weight:600;
-    font-Family:'Inter', sans-serif;
+    font-Weight: 600;
+    font-Family: 'Inter', sans-serif;
 }
-.about-text h1{
+
+.about-text h1 {
     padding: 12px;
     font-size: 65px;
-  
+
 }
-
-
 
 .block-reveal {
     position: relative;
@@ -62,9 +62,9 @@ section#About-section {
 .block-reveal {
     position: relative;
     /* Additional styles as needed */
-  }
-  
-  .block-reveal::after {
+}
+
+.block-reveal::after {
     content: '';
     position: absolute;
     top: 0;
@@ -72,54 +72,59 @@ section#About-section {
     height: 100%;
     width: 0;
     background-color: #e0e0e0;
-  }
-  
-  .block-reveal.animated::after {
+}
+
+.block-reveal.animated::after {
     animation: block-reveal 1.2s cubic-bezier(0.19, 0, 0.22, 1) 1s forwards;
     animation-delay: 0.8s;
-  }
-  
-  .block-reveal .text-reveal {
+}
+
+.block-reveal .text-reveal {
     opacity: 0;
-  }
-  
-  .block-reveal.animated .text-reveal {
+}
+
+.block-reveal.animated .text-reveal {
     animation: text-reveal 0.0001s linear 1.6s forwards;
-  }
-  
-  @keyframes block-reveal {
+}
+
+@keyframes block-reveal {
     0% {
-      left: 0;
-      width: 0;
+        left: 0;
+        width: 0;
     }
+
     50% {
-      left: 0;
-      width: 100%;
+        left: 0;
+        width: 100%;
     }
+
     100% {
-      left: 100%;
-      width: 0;
+        left: 100%;
+        width: 0;
     }
-  }
-  
-  @keyframes text-reveal {
+}
+
+@keyframes text-reveal {
     0% {
-      opacity: 0;
+        opacity: 0;
     }
+
     100% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  
-.about-para p{
+}
+
+.about-para p {
     text-align: justify;
     padding: 15px;
 }
-.text-container{
+
+.text-container {
     display: flex;
     flex-direction: column;
 }
-.skills-pill{
+
+.skills-pill {
     border: solid 0.5px;
     height: 50px;
     padding: 10px;
@@ -131,60 +136,70 @@ section#About-section {
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     pointer-events: auto;
-    
+
 }
-.skills-pill:hover{
-    background-color:#ff6600 ;
+
+.skills-pill:hover {
+    background-color: #ff6600;
     transition: 1s;
 
 }
-.icon-container-profile{
+
+.icon-container-profile {
     display: flex;
 }
-.icon-profile{
-    padding:10px;
+
+.icon-profile {
+    padding: 10px;
     pointer-events: auto;
 }
-.github-logo-icon, .linkedin-logo-icon{
-width: 30px;
+
+.github-logo-icon,
+.linkedin-logo-icon {
+    width: 30px;
 }
 
 @media screen and (max-width: 768px) {
-    .avatar-3D{
-  
+    .avatar-3D {
+
         display: block;
         height: 100%;
         overflow-y: hidden;
-    
-}
 
-    .container-1{
-        padding: 15px!important;
     }
-    .text-container{
+
+    .container-1 {
+        padding: 15px !important;
+    }
+
+    .text-container {
         display: flex;
         flex-direction: column;
         width: 300px;
 
     }
-    #image-about{
+
+    #image-about {
         display: block;
         height: 400px;
-    
+
     }
+
     .skills-container {
         display: contents;
     }
+
     section#About-section {
         background-color: #eeebeb;
         border-top-left-radius: 60px 70px;
         border-top-right-radius: 60px 70px;
         /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
         height: 100%;
-        padding: 0!important;
+        padding: 0 !important;
         width: 100%;
     }
-    .about-text h1{
+
+    .about-text h1 {
         font-size: 40px;
     }
 
