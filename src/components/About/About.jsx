@@ -1,53 +1,35 @@
 import "./about.css";
 // import aboutJamesImage from '../src/assets/images/about-james.jpg';
 // import { Avatar } from '@readyplayerme/visage';
-import React, { Suspense, useEffect,useRef } from "react";
+import React, { Suspense, useEffect,useRef,useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import Model from "./Model.jsx"; /* highlight-line */
 import gsap from "gsap";
+import { useInView } from 'react-intersection-observer';
+
 
 
 const modelSrc = "https://models.readyplayer.me/64c7b1af067a35dfd8b3de7f.glb";
 
 function About() {
-  const blockRevealRef = useRef(null);
+  const [isTextRevealed, setTextRevealed] = useState(false);
+  const [ref, inView] = useInView({
+    triggerOnce: true, // This ensures that the animation triggers only once when in view
+  });
 
   useEffect(() => {
-    const handleIntersection = (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          gsap.to(entry.target, {
-            opacity: 1,
-            width: "100%",
-            duration: 1.2,
-            delay: 0.8,
-            ease: "power2.inOut",
-           
-          });
-          observer.unobserve(entry.target);
-        }
-      });
-    };
+    if (inView) {
+      // When the component is in view, trigger the animation after a delay
+      const timeout = setTimeout(() => {
+        setTextRevealed(true);
+      }, 800); // Adjust the delay as needed (in milliseconds)
 
-    const options = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.1,
-    };
-
-    const observer = new IntersectionObserver(handleIntersection, options);
-
-    if (blockRevealRef.current) {
-      observer.observe(blockRevealRef.current);
+      // Clear the timeout when the component unmounts or when inView changes
+      return () => clearTimeout(timeout);
     }
+  }, [inView]);
 
-    return () => {
-      if (blockRevealRef.current) {
-        observer.unobserve(blockRevealRef.current);
-      }
-    };
-  }, []);
 
 
   return (
@@ -148,16 +130,16 @@ function About() {
         <div className="container-1">
           <div className="text-container">
             <span className="about-text">
-              <span class="block-reveal" ref={blockRevealRef}>
-                <span class="text-reveal">
+            <div className={`block-reveal ${isTextRevealed ? 'animated' : ''}`} ref={ref}>
+
+      <div className="text-reveal">
                   <h1>ABOUT-ME</h1>
-                </span>
-              </span>
+              </div></div>
               <div>
                 <img src="varified.png"></img>
               </div>
             </span>
-            <span className="block-reveal" ref={blockRevealRef}>
+            <span className={`block-reveal ${isTextRevealed ? 'animated' : ''}`} ref={ref}>
             <span className="text-reveal">
               <p>
                 Hi, Thank you for visiting my profile! I'm a Front-end Developer
