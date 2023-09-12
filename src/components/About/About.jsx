@@ -7,6 +7,7 @@ import { OrbitControls } from "@react-three/drei";
 import Model from "./Model.jsx"; /* highlight-line */
 import gsap from "gsap";
 import { useInView } from 'react-intersection-observer';
+import {StaggerAnimation} from "./StaggerAnimation.jsx";
 
 
 
@@ -141,6 +142,7 @@ function About() {
             </span>
             <span className={`block-reveal ${isTextRevealed ? 'animated' : ''}`} ref={ref}>
             <span className="text-reveal">
+            
               <p>
                 Hi, Thank you for visiting my profile! I'm a Front-end Developer
                 that passionate about Innovative technology. I always
