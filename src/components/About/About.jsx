@@ -7,32 +7,106 @@ import { OrbitControls } from "@react-three/drei";
 import Model from "./Model.jsx"; /* highlight-line */
 import gsap from "gsap";
 import { useInView } from 'react-intersection-observer';
-import {StaggerAnimation} from "./StaggerAnimation.jsx";
+import styled, { keyframes } from 'styled-components';
+import RevealAnimation from "./RevealAnimation";
+
 
 
 
 const modelSrc = "https://models.readyplayer.me/64c7b1af067a35dfd8b3de7f.glb";
 
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
+const revealIn = keyframes`
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+`;
+
+const revealOut = keyframes`
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(101%);
+  }
+`;
+
+const RevealContainer = styled.div`
+  position: relative;
+  overflow: hidden;
+  & > * {
+    animation: ${fadeIn} 0s 0.6s;
+    animation-fill-mode: backwards;
+  }
+  &.animate::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transform: translateX(-100%);
+    animation: ${revealIn} 0.6s 0s, ${revealOut} 0.6s 0.6s;
+    animation-fill-mode: forwards;
+  }
+`;
+
 function About() {
-  const [isTextRevealed, setTextRevealed] = useState(false);
-  const [ref, inView] = useInView({
-    triggerOnce: true, // This ensures that the animation triggers only once when in view
-  });
+  const aboutRef = useRef(null); // Create a ref for the ABOUT-ME section
+  const paragraphRef = useRef(null); // Create a ref for the paragraph
 
   useEffect(() => {
-    if (inView) {
-      // When the component is in view, trigger the animation after a delay
-      const timeout = setTimeout(() => {
-        setTextRevealed(true);
-      }, 800); // Adjust the delay as needed (in milliseconds)
+    const handleIntersection = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (entry.target === aboutRef.current) {
+            aboutRef.current.classList.add("animate");
+          } else if (entry.target === paragraphRef.current) {
+            paragraphRef.current.classList.add("animate");
+          }
+        }
+      });
+    };
 
-      // Clear the timeout when the component unmounts or when inView changes
-      return () => clearTimeout(timeout);
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5, // Adjust this threshold as needed
+    };
+    
+
+    const observer = new IntersectionObserver(handleIntersection, options);
+
+    if (aboutRef.current) {
+      observer.observe(aboutRef.current);
     }
-  }, [inView]);
 
+    if (paragraphRef.current) {
+      observer.observe(paragraphRef.current);
+    }
 
-
+    // Cleanup the observer when the component unmounts
+    return () => {
+      if (aboutRef.current) {
+        observer.unobserve(aboutRef.current);
+      }
+      if (paragraphRef.current) {
+        observer.unobserve(paragraphRef.current);
+      }
+    };
+  }, []);
   return (
     <section id="About-section">
       <div className="container">
@@ -98,51 +172,21 @@ function About() {
               <OrbitControls autoRotate={true} enableZoom={false} />
             </Canvas>
           </div>
-
-          {/* <div className='avatar-3D'><Avatar
-  ambientLightColor="#fff5b6"
-  ambientLightIntensity={0.25}
- 
-  background={{}}
-  cameraInitialDistance={0}
-  cameraTarget={1.65}
-  cameraZoomTarget={null}
-  className="avatar"
-  dirLightColor="#002aff"
-  dirLightIntensity={5}
-  environment="hub"
-  headMovement
-  idleRotation
-  modelSrc="https://models.readyplayer.me/64c7b1af067a35dfd8b3de7f.glb"
-  poseSrc='https://models.readyplayer.me/64c7b1af067a35dfd8b3de7f.glb'
-  onLoaded={function noRefCheck(){}}
-  onLoading={function noRefCheck(){}}
-  scale={1}
-  spotLightAngle={0.314}
-  spotLightColor="#fff5b6"
-  spotLightIntensity={1}
-
-  style={{
-    background: 'transparent'
-  }} */}
-
-          {/* <img src="about-james.jpg" alt="About James" id='image-about' /> */}
         </div>
         <div className="container-1">
           <div className="text-container">
             <span className="about-text">
-            <div className={`block-reveal ${isTextRevealed ? 'animated' : ''}`} ref={ref}>
+           
 
-      <div className="text-reveal">
+            <RevealContainer ref={aboutRef}>
                   <h1>ABOUT-ME</h1>
-              </div></div>
+              </RevealContainer>
               <div>
                 <img src="varified.png"></img>
               </div>
             </span>
-            <span className={`block-reveal ${isTextRevealed ? 'animated' : ''}`} ref={ref}>
-            <span className="text-reveal">
-            
+           
+            <RevealContainer ref={paragraphRef}>
               <p>
                 Hi, Thank you for visiting my profile! I'm a Front-end Developer
                 that passionate about Innovative technology. I always
@@ -151,8 +195,13 @@ function About() {
                 aesthetic websites. I'm fortunate to be able to work with
                 amazing clients and companies that use Innovative technology.
               </p>
-            </span>
-            </span>
+            
+            </RevealContainer>
+
+
+
+
+            
             <div className="skills-container">
               <span className="skills-pill">HTML5</span>{" "}
               <span className="skills-pill">CSS</span>{" "}
