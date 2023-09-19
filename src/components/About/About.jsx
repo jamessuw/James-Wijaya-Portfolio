@@ -107,6 +107,26 @@ function About() {
       }
     };
   }, []);
+
+
+  const canvas3DRef = useRef(null); // Create a ref for the 3D canvas
+
+  useEffect(() => {
+    const handleWheel = (e) => {
+      e.preventDefault();
+    };
+
+    if (canvas3DRef.current) {
+      canvas3DRef.current.addEventListener('wheel', handleWheel);
+    }
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      if (canvas3DRef.current) {
+        canvas3DRef.current.removeEventListener('wheel', handleWheel);
+      }
+    };
+  }, []);
   return (
     <section id="About-section">
       <div className="container">
@@ -138,7 +158,10 @@ function About() {
                 width: "100%",
                 height: "100vh",
                 id: "canvaId",
+                pointerEvents: "none", // Allow scroll events to pass through the canvas
               }}
+              ref={canvas3DRef} // Add the canvas3DRef here
+          
             >
               <ambientLight intensity={0.8} />
               <ambientLight intensity={1.1} />
@@ -169,7 +192,7 @@ function About() {
                 />
                 <Model position={[0.025, -0.9, 0]} /> /* highlight-line */
               </Suspense>
-              <OrbitControls autoRotate={true} enableZoom={false} />
+              <OrbitControls autoRotate={false} enableZoom={false} />
             </Canvas>
           </div>
         </div>

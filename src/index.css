@@ -76,6 +76,12 @@ textarea:focus{
     border: solid 6px #4949e1db;
     transition: 0.2s;
 }
+canvas{
+    cursor: pointer;
+    overflow: auto;
+    pointer-events: none;
+    touch-action: auto;
+}
 
 
 
