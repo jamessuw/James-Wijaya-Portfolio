@@ -11,7 +11,9 @@ function Landing() {
         <div className="container-1" id="landing-page">
           <div className="binary-cube">
             <div className="blob-container">
-              <Canvas camera={{ position: [0.0, 0.0, 8.0] }} shadow>
+              <Canvas  camera={{ position: [0.0, 0.0, 8.0] }} shadow
+        
+              >
                 <Blob />
               </Canvas>
             </div>

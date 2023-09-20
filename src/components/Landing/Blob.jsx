@@ -23,7 +23,6 @@ function Blob() {
       mesh.current.rotation.x += 0.004; // Adjust the rotation speed here
       mesh.current.rotation.y += 0.003; // Adjust the rotation speed here
 
-
       mesh.current.material.uniforms.u_time.value =
         0.4 * clock.getElapsedTime();
 
@@ -34,25 +33,38 @@ function Blob() {
       );
     }
   });
+
   return (
-    <mesh
-      ref={mesh}
-      scale={1.8}
-      position={[0, 0, 0]}
-      onPointerOver={() => (hover.current = true)}
-      onPointerOut={() => (hover.current = false)}
-      castShadow={shouldCastShadow} 
-      receiveShadow={shouldReceiveShadow}
-      
-    >
-      <icosahedronGeometry args={[2, 20]} />
-      <meshStandardMaterial />
-      <shaderMaterial
-        vertexShader={vertexShader}
-        fragmentShader={fragmentShader}
-        uniforms={uniforms}
-      />
-    </mesh>
+    <group>
+      <mesh
+        ref={mesh}
+        scale={1.8}
+        position={[0, 0, 0]}
+        onPointerOver={() => (hover.current = true)}
+        onPointerOut={() => (hover.current = false)}
+        castShadow={shouldCastShadow}
+        receiveShadow={shouldReceiveShadow}
+        style={{ pointerEvents: 'none' }}
+      >
+        <icosahedronGeometry args={[2, 20]} />
+        <meshStandardMaterial />
+        <shaderMaterial
+          vertexShader={vertexShader}
+          fragmentShader={fragmentShader}
+          uniforms={uniforms}
+        />
+      </mesh>
+      {/* This plane is used for scrolling */}
+      <mesh
+        position={[0, 0, -5]} // Adjust the position to create a "scrollable" effect
+        onPointerOver={() => (hover.current = true)}
+        onPointerOut={() => (hover.current = false)}
+        scale={[2.2, 2.2, 2.2]}
+      >
+        <planeGeometry args={[2, 2]} />
+        <meshBasicMaterial transparent opacity={0} />
+      </mesh>
+    </group>
   );
 }
 
