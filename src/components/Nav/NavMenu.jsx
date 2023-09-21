@@ -12,10 +12,13 @@ import {
 import React, { useState, useEffect } from "react";
 // sample with useState
 
+import{link} from 'react-scroll';
+
 const NavMenu = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
+  
 
 
   

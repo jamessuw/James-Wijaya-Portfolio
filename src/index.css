@@ -35,6 +35,10 @@
 html{
     scroll-behavior: smooth!important;
 }
+a{
+    transition:all 0.5 ease;
+}
+
 ::-webkit-scrollbar{
     display: none;
 
