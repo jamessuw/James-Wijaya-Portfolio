@@ -33,7 +33,7 @@
     --hover:#ffa260;
 }
 html{
-    scroll-behavior: smooth;
+    scroll-behavior: smooth!important;
 }
 ::-webkit-scrollbar{
     display: none;

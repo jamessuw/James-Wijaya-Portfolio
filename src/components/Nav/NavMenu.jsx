@@ -9,13 +9,16 @@ import {
   NavItem,
   NavLink,
 } from "reactstrap";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 // sample with useState
 
 const NavMenu = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
+
+
+  
 
   return (
     <div>
@@ -38,22 +41,22 @@ const NavMenu = (props) => {
         <Collapse className="justify-content-end" isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink className="Nav-Link" href="/">
+              <NavLink className="Nav-Link" href="#About-section">
                 About
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className="Nav-Link" href="/desktop">
-                Skills
+              <NavLink className="Nav-Link" href="#project-section-container">
+                Project
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className="Nav-Link" href="/login">
-                Projects
+              <NavLink className="Nav-Link" href="#contact-section">
+                Lab
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className="Nav-Link" href="/register">
+              <NavLink className="Nav-Link" href="#contact-section">
                 Contact
               </NavLink>
             </NavItem>
