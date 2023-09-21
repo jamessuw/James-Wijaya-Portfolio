@@ -84,7 +84,7 @@ function Contact() {
           <div className="container-abstracts">
             <div class="blob"></div>
 
-            <p className="tag-contact">
+            <p className="tag-contact reveal" ref={el => revealElements.current.push(el)}>
               IM CURRENTLY OPEN FOR PROJETC <br></br>
               FEEL FREE TO REACH OUT ILL CONTACT<br></br>AS SOON AS I CAN THANK
               YOU
