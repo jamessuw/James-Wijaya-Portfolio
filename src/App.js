@@ -6,6 +6,9 @@ import Landing from './components/Landing/Landing';
 import About from './components/About/About';
 import Project from './components/Project/Project';
 import Contact from './components/Contact/Contact';
+import Lab from './components/Lab/Lab';
+
+
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from 'react';
@@ -81,6 +84,9 @@ function App() {
     <section className='panel'>
     <Project/>
     </section>
+    <section class="panel">
+    <Lab/>
+   </section>
     <section class="panel">
     <Contact/>
    </section>
