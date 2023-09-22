@@ -6,6 +6,8 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import Model from "./Model"; /* highlight-line */
 import gsap from "gsap";
+import RevealAnimation from '../Animation/RevealAnimation';
+
 
 
 
@@ -41,28 +43,6 @@ function Contact() {
   };
 
 
-  const revealElements = useRef([]);
-
-  useEffect(() => {
-    const options = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.5,
-    };
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('reveal__content');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, options);
-
-    revealElements.current.forEach(element => {
-      observer.observe(element);
-    });
-  }, []);
 
 
   return (
@@ -70,12 +50,12 @@ function Contact() {
       <span className="heading-project">
         {" "}
         <div className="singleLine">
-        <div className="reveal" ref={el => revealElements.current.push(el)}>
-        <div className="reveal__content"> <h2>
+        <RevealAnimation>
+        <h2>
           LET'S CONNECT & GET TO KNOW<br></br> EACH OTHER
         </h2>
-        </div>
-        </div>
+        </RevealAnimation>
+        
        </div>
       </span>
 
@@ -83,13 +63,14 @@ function Contact() {
         <div className="container-1">
           <div className="container-abstracts">
             <div class="blob"></div>
-
-            <p className="tag-contact reveal" ref={el => revealElements.current.push(el)}>
+            <RevealAnimation>
+            <p className="tag-contact reveal">
               IM CURRENTLY OPEN FOR PROJETC <br></br>
               FEEL FREE TO REACH OUT ILL CONTACT<br></br>AS SOON AS I CAN THANK
               YOU
             </p>
 
+</RevealAnimation>
 
             <div className="ball" id="ball-1"></div>
             <div className="abstracts"></div>
