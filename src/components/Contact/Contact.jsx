@@ -1,17 +1,12 @@
 import "./contact.css";
-import { useRef,useEffect } from "react";
+import { useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import Model from "./Model"; /* highlight-line */
 import gsap from "gsap";
-import RevealAnimation from '../Animation/RevealAnimation';
-
-
-
-
-
+import RevealAnimation from "../Animation/RevealAnimation";
 
 function Contact() {
   const modelSrc = "https://models.readyplayer.me/64c7b1af067a35dfd8b3de7f.glb";
@@ -42,21 +37,17 @@ function Contact() {
     e.target.reset();
   };
 
-
-
-
   return (
     <section id="contact-section">
       <span className="heading-project">
         {" "}
         <div className="singleLine">
-        <RevealAnimation>
-        <h2>
-          LET'S CONNECT & GET TO KNOW<br></br> EACH OTHER
-        </h2>
-        </RevealAnimation>
-        
-       </div>
+          <RevealAnimation>
+            <h2>
+              LET'S CONNECT & GET TO KNOW<br></br> EACH OTHER
+            </h2>
+          </RevealAnimation>
+        </div>
       </span>
 
       <div className="container">
@@ -64,13 +55,12 @@ function Contact() {
           <div className="container-abstracts">
             <div class="blob"></div>
             <RevealAnimation>
-            <p className="tag-contact reveal">
-              IM CURRENTLY OPEN FOR PROJETC <br></br>
-              FEEL FREE TO REACH OUT ILL CONTACT<br></br>AS SOON AS I CAN THANK
-              YOU
-            </p>
-
-</RevealAnimation>
+              <p className="tag-contact reveal">
+                IM CURRENTLY OPEN FOR PROJETC <br></br>
+                FEEL FREE TO REACH OUT ILL CONTACT<br></br>AS SOON AS I CAN
+                THANK YOU
+              </p>
+            </RevealAnimation>
 
             <div className="ball" id="ball-1"></div>
             <div className="abstracts"></div>

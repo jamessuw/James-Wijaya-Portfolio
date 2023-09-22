@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from "react";
 
 const RevealAnimation = ({ children }) => {
   const revealElements = useRef([]);
@@ -6,14 +6,14 @@ const RevealAnimation = ({ children }) => {
   useEffect(() => {
     const options = {
       root: null,
-      rootMargin: '0px',
+      rootMargin: "0px",
       threshold: 0.5,
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('reveal__content');
+          entry.target.classList.add("reveal__content");
           observer.unobserve(entry.target);
         }
       });
@@ -32,4 +32,3 @@ const RevealAnimation = ({ children }) => {
 };
 
 export default RevealAnimation;
-

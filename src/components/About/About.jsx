@@ -1,17 +1,14 @@
 import "./about.css";
 // import aboutJamesImage from '../src/assets/images/about-james.jpg';
 // import { Avatar } from '@readyplayerme/visage';
-import React, { Suspense, useEffect,useRef,useState } from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import Model from "./Model.jsx"; /* highlight-line */
 import gsap from "gsap";
-import { useInView } from 'react-intersection-observer';
-import styled, { keyframes } from 'styled-components';
+import { useInView } from "react-intersection-observer";
+import styled, { keyframes } from "styled-components";
 import RevealAnimation from "./RevealAnimation";
-
-
-
 
 const modelSrc = "https://models.readyplayer.me/64c7b1af067a35dfd8b3de7f.glb";
 
@@ -51,7 +48,7 @@ const RevealContainer = styled.div`
   }
   &.animate::after {
     position: absolute;
-    content: '';
+    content: "";
     left: 0;
     top: 0;
     width: 100%;
@@ -85,7 +82,6 @@ function About() {
       rootMargin: "0px",
       threshold: 0.5, // Adjust this threshold as needed
     };
-    
 
     const observer = new IntersectionObserver(handleIntersection, options);
 
@@ -108,7 +104,6 @@ function About() {
     };
   }, []);
 
-
   const canvas3DRef = useRef(null); // Create a ref for the 3D canvas
 
   useEffect(() => {
@@ -117,13 +112,13 @@ function About() {
     };
 
     if (canvas3DRef.current) {
-      canvas3DRef.current.addEventListener('wheel', handleWheel);
+      canvas3DRef.current.addEventListener("wheel", handleWheel);
     }
 
     // Cleanup the event listener when the component unmounts
     return () => {
       if (canvas3DRef.current) {
-        canvas3DRef.current.removeEventListener('wheel', handleWheel);
+        canvas3DRef.current.removeEventListener("wheel", handleWheel);
       }
     };
   }, []);
@@ -161,7 +156,6 @@ function About() {
                 pointerEvents: "none", // Allow scroll events to pass through the canvas
               }}
               ref={canvas3DRef} // Add the canvas3DRef here
-          
             >
               <ambientLight intensity={0.8} />
               <ambientLight intensity={1.1} />
@@ -199,16 +193,14 @@ function About() {
         <div className="container-1">
           <div className="text-container">
             <span className="about-text">
-           
-
-            <RevealContainer ref={aboutRef}>
-                  <h1>ABOUT-ME</h1>
+              <RevealContainer ref={aboutRef}>
+                <h1>ABOUT-ME</h1>
               </RevealContainer>
               <div>
                 <img src="varified.png"></img>
               </div>
             </span>
-           
+
             <RevealContainer ref={paragraphRef}>
               <p>
                 Hi, Thank you for visiting my profile! I'm a Front-end Developer
@@ -218,13 +210,8 @@ function About() {
                 aesthetic websites. I'm fortunate to be able to work with
                 amazing clients and companies that use Innovative technology.
               </p>
-            
             </RevealContainer>
 
-
-
-
-            
             <div className="skills-container">
               <span className="skills-pill">HTML5</span>{" "}
               <span className="skills-pill">CSS</span>{" "}

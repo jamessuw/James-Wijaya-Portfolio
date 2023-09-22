@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import styled, { keyframes } from 'styled-components';
+import React, { useEffect, useRef } from "react";
+import styled, { keyframes } from "styled-components";
 
 const fadeIn = keyframes`
   0% {
@@ -37,7 +37,7 @@ const RevealContainer = styled.div`
   }
   &.animate::after {
     position: absolute;
-    content: '';
+    content: "";
     left: 0;
     top: 0;
     width: 100%;
@@ -56,7 +56,7 @@ const RevealAnimation = ({ animationIn, animationOut }) => {
   const handleIntersection = (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        revealRef.current.classList.add('animate');
+        revealRef.current.classList.add("animate");
       }
     });
   };
@@ -64,7 +64,7 @@ const RevealAnimation = ({ animationIn, animationOut }) => {
   useEffect(() => {
     const options = {
       root: null,
-      rootMargin: '0px',
+      rootMargin: "0px",
       threshold: 0.5, // Adjust this threshold as needed
     };
 
@@ -83,15 +83,19 @@ const RevealAnimation = ({ animationIn, animationOut }) => {
   }, []);
 
   return (
-    <RevealContainer ref={revealRef} animationIn={animationIn} animationOut={animationOut}>
-   <p>
-                Hi, Thank you for visiting my profile! I'm a Front-end Developer
-                that passionate about Innovative technology. I always
-                Incorporate my creativity into my work. For the past few years,
-                I have helped businesses and individuals to achieve functional
-                aesthetic websites. I'm fortunate to be able to work with
-                amazing clients and companies that use Innovative technology.
-              </p>
+    <RevealContainer
+      ref={revealRef}
+      animationIn={animationIn}
+      animationOut={animationOut}
+    >
+      <p>
+        Hi, Thank you for visiting my profile! I'm a Front-end Developer that
+        passionate about Innovative technology. I always Incorporate my
+        creativity into my work. For the past few years, I have helped
+        businesses and individuals to achieve functional aesthetic websites. I'm
+        fortunate to be able to work with amazing clients and companies that use
+        Innovative technology.
+      </p>
     </RevealContainer>
   );
 };
