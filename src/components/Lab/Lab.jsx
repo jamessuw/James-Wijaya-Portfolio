@@ -1,4 +1,8 @@
-import React from "react";
+import React, { Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+
+
 
 import "./lab.css";
 import { useRef, useEffect } from "react";
@@ -14,8 +18,6 @@ function Lab() {
                 <h1>" THE LAB "</h1>
               <h2> COMMING SOON!</h2>
             </RevealAnimation>
-
-            
           </div>
         </div>
       </div>

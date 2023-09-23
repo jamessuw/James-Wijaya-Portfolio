@@ -4,7 +4,7 @@ import emailjs from "@emailjs/browser";
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import Model from "./Model"; /* highlight-line */
+// import Model from "../Lab/Model"; /* highlight-line */
 import gsap from "gsap";
 import RevealAnimation from "../Animation/RevealAnimation";
 
