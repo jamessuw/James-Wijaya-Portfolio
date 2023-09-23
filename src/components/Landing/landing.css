@@ -263,9 +263,9 @@ canvas {
         display: flex;
         flex-direction: column;
         text-align: center;
-        flex-direction: column-reverse;
-
+        flex-direction: column;
     }
+    
 
     .landing-catalog {
         margin-top: 50px;
