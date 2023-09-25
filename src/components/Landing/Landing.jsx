@@ -36,7 +36,7 @@ function Landing() {
               </span>
             </div>
             <div className="spacing">
-              <p>SCROLL DOWN</p>
+              <p>SCROLL ME</p>
               <div className="mouse-container">
                 <div class="mouse">
                   <span class="scroller"></span>
