@@ -282,6 +282,13 @@ body:not(.mobile) .list-text:hover + .img-project img{
     display: block;
   }
 
+
+
+/* slide */
+
+
+
+
   @media screen and (max-width: 768px) {
     #project-section{
       width: var(--container-width-sm);

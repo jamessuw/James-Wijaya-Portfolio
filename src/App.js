@@ -12,6 +12,7 @@ import Lab from './components/Lab/Lab';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from 'react';
+import Project2 from './components/Project2/Project2';
 
 
 
@@ -84,6 +85,10 @@ function App() {
     <section className='panel'>
     <Project/>
     </section>
+    <section className='panel'>
+    <Project2/>
+    </section>
+
     <section class="panel">
     <Lab/>
    </section>

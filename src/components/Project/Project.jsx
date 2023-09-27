@@ -3,6 +3,9 @@ import './project.css'
 // import Popup from 'reactjs-popup';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Carousel from 'react-bootstrap/Carousel';
+
+
 
 
 
@@ -108,6 +111,8 @@ function Project() {
 
     
     <section id='project-section-container'>
+      
+
       <div data-speed="0.5" className='box1'><h1>PROJECT</h1></div>
      <div data-speed="0.5" className='box2'><h2>ARC`HIVE</h2></div> 
 
