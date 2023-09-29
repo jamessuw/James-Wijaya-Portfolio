@@ -3,8 +3,6 @@ import './project.css'
 // import Popup from 'reactjs-popup';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Carousel from 'react-bootstrap/Carousel';
-
 
 
 
@@ -34,7 +32,7 @@ function Project() {
     {
       name: "KumalaJingga",
       imageSrc: "kumalajingga.png",
-      text: "",
+      text: "KumalaJingga is an Industrial supply company that supplied industry needs. The service that I collaborate with them are developing a website using Wordpress, This also include injecting custome code and custom plugin to the website for optimisations needs",
       tech:"Wordpress",
       service:"Web Development",
       location:"Indonesia",
@@ -111,7 +109,6 @@ function Project() {
 
     
     <section id='project-section-container'>
-      
 
       <div data-speed="0.5" className='box1'><h1>PROJECT</h1></div>
      <div data-speed="0.5" className='box2'><h2>ARC`HIVE</h2></div> 
@@ -129,9 +126,7 @@ function Project() {
           >
             <div className='list-text'>
               <h4>{item.name}</h4>   
-              <div className='project-pill-container'>
-              <div className='project-pill' id='tech-pill'> <p>{item.tech}</p></div><div className='project-pill' id="location-pill"> <p>{item.location}</p></div><div className='project-pill' id='service-pill'> <p>{item.service}</p></div>
-              </div>
+              
             </div>
           </div>
         ))}
@@ -160,7 +155,8 @@ function Project() {
                     }
                     alt={item.name}
                   />
-                <p>{item.text}</p>
+
+               <span className=''><p>{item.text}</p></span> 
               </div>
             )}
           </div>
