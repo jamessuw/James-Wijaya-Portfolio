@@ -38,7 +38,7 @@ function Contact() {
   };
 
   return (
-    <section id="contact-section">
+    <div id="contact-section">
       <span className="heading-project">
         {" "}
         <div className="singleLine">
@@ -69,7 +69,7 @@ function Contact() {
         </div>
 
         <div className="container-1">
-          <section>
+          <div>
             <form
               ref={form}
               onSubmit={sendEmail}
@@ -106,10 +106,10 @@ function Contact() {
                 Send massages
               </button>
             </form>
-          </section>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 
