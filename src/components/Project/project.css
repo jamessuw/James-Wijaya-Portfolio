@@ -92,6 +92,18 @@ font-size: 3rem;
     position: absolute;
 
 }
+#project-section{
+  width: var(--container-width-sm);
+  display: flex!important;
+  flex-direction: column-reverse!important;
+  height: 100%;
+}
+#project-list{
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+    width: 50vw;
+}
 /* 
 button#folder-button {
     background: none;

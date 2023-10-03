@@ -115,7 +115,7 @@ function Project() {
 
       <div className='container' id='project-section'>
       {/* list container descriptions*/}
-      <div className='container-1'>
+      <div className='container-1'id='project-list'>
 
         {projectItems.map((item) => (
           <div
