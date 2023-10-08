@@ -68,10 +68,10 @@ function Project() {
      <div data-speed="0.5" className='box2'><h2>ARC`HIVE</h2></div> 
 
      <Carousel responsive={responsive} containerClass="carousel-container"  infinite={true}>
-  <div><div><img src='/KumalaJingga.png'></img></div></div>
-  <div><div><img src='/CD.png'></img></div></div>
-  <div><div><img src='/meetbowl.png'></img></div></div>
-  <div><div><img src='/etome.png'></img></div></div>
+  <div><div><img src='/KumalaJingga.png'></img></div><div><h3>KumalaJingga</h3><h4>2019-2020</h4><p>Web Development service that provide Industrial needs</p></div></div>
+  <div><div><img src='/CD.png'></img></div><div><h3>KumalaJingga</h3><h4>2019-2020</h4><p>Web Development service that provide Industrial needs</p></div></div>
+  <div><div><img src='/meetbowl.png'></img></div><div><h3>KumalaJingga</h3><h4>2019-2020</h4><p>Web Development service that provide Industrial needs</p></div></div>
+  <div><div><img src='/etome.png'></img></div><div><h3>KumalaJingga</h3><h4>2019-2020</h4><p>Web Development service that provide Industrial needs</p></div></div>
 </Carousel>;
 
    
