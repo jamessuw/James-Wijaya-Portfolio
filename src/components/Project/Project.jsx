@@ -3,77 +3,13 @@ import './project.css'
 // import Popup from 'reactjs-popup';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 
 
 function Project() {
-  const [hoveredItem, setHoveredItem] = useState(null);
-  const [unhoveredItemImage, setUnhoveredItemImage] = useState(null);
 
-
-  const handleMouseEnter = (itemName) => {
-    setHoveredItem(itemName);
-    setUnhoveredItemImage(null);
-  };
-
-  const handleMouseLeave = (itemName) => {
-    setHoveredItem(null);
-    if (itemName === '') {
-      // Keep "KumalaJingga" image displayed when unhovered
-    } else {
-      setUnhoveredItemImage(itemName);
-      console.log(`${itemName} unhovered`);
-    }
-  };
-
-
-  const projectItems = [
-    {
-      name: "KumalaJingga",
-      imageSrc: "kumalajingga.png",
-      text: "KumalaJingga is an Industrial supply company that supplied industry needs. The service that I collaborate with them are developing a website using Wordpress, This also include injecting custome code and custom plugin to the website for optimisations needs",
-      tech:"Wordpress",
-      service:"Web Development",
-      location:"Indonesia",
-
-    },
-    {
-      name:"ClearDynamics",
-      imageSrc:"CD.png",
-      text:"",
-      service:"Contract",
-      location:"Melbourne",
-      tech:"Professionals"
-  },
-    {
-      name: "Meetbowl",
-      imageSrc: "meetbowl.png",
-      text: "",
-      tech:"SquareSpace",
-      service:"Web Development",
-      location:"Melbourne"
-    },
-    {
-      name: "etome",
-      imageSrc: "etome.png",
-      text: "",
-      tech:"Shopify",
-      service:"Web Development",
-      location:"Indonesia",
-     
-
-    },
-
-    // Add more project items here
-
-    
-  ];
-  useEffect(() => {
-    setUnhoveredItemImage(projectItems[0].imageSrc);
-  }, []);
-
-  
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -103,6 +39,24 @@ function Project() {
     });
   }, []);
 
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+      slidesToSlide: 3 // optional, default to 1.
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+      slidesToSlide: 2 // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1 // optional, default to 1.
+    }
+  };
+
 
   return (
   
@@ -113,60 +67,14 @@ function Project() {
       <div data-speed="0.5" className='box1'><h1>PROJECT</h1></div>
      <div data-speed="0.5" className='box2'><h2>ARC`HIVE</h2></div> 
 
-      <div className='container' id='project-section'>
-      {/* list container descriptions*/}
-      <div className='container-1'id='project-list'>
+     <Carousel responsive={responsive} containerClass="carousel-container"  infinite={true}>
+  <div><div><img src='/KumalaJingga.png'></img></div></div>
+  <div><div><img src='/CD.png'></img></div></div>
+  <div><div><img src='/meetbowl.png'></img></div></div>
+  <div><div><img src='/etome.png'></img></div></div>
+</Carousel>;
 
-        {projectItems.map((item) => (
-          <div
-            key={item.name}
-            className='project-container'
-            onMouseEnter={() => handleMouseEnter(item.name)}
-            onMouseLeave={() => handleMouseLeave (item.name)}
-          >
-            <div className='list-text'>
-              <h4>{item.name}</h4>   
-              
-            </div>
-          </div>
-        ))}
-        </div>
-
-    {/* Image container -project */}
-    
-
-    <div className='container-1'>
-      
-        {projectItems.map((item) => (
-          <div
-            key={item.name}
-            className='image-container'
-          >
-            {(hoveredItem === item.name || unhoveredItemImage === item.name) && (
-              <div className='hovered-item'>
-            <img
-                    className='img-project'
-                    src={
-                      hoveredItem === item.name
-                        ? item.hoverImageSrc || item.imageSrc
-                        : unhoveredItemImage === item.name
-                        ? item.imageSrc
-                        : null
-                    }
-                    alt={item.name}
-                  />
-
-               <span className=''><p>{item.text}</p></span> 
-              </div>
-            )}
-          </div>
-          
-        ))}
-      </div>
-      {/* ... */}
-      
-      
-      </div>
+   
       
     </section>
 
