@@ -295,6 +295,26 @@ body:not(.mobile) .list-text:hover + .img-project img{
   }
 
 
+  .img-project img{
+height: 300px;
+  }
+
+  .react-multi-carousel-track {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    will-change: transform,transition;
+    height: 100vh;
+}
+.react-multi-carousel-list.carousel-container ul{
+  height: 100vh;
+
+}
 
 /* slide */
 
