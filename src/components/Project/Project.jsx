@@ -70,7 +70,7 @@ function Project() {
           <div className="img-project">  
            <img src="/KumalaJingga.png"></img>
           </div>
-          <div>
+          <div className="desc-container">
            <h3>KumalaJingga</h3>
             <h4>2019-2020</h4>
             <p>Web Development service that provide Industrial needs</p>
@@ -80,7 +80,7 @@ function Project() {
           <div className="img-project">
             <img src="/CD.png"></img>
           </div>
-          <div>
+          <div className="desc-container">
             <h3>KumalaJingga</h3>
             <h4>2019-2020</h4>
             <p>Web Development service that provide Industrial needs</p>
@@ -90,13 +90,13 @@ function Project() {
           <div className="img-project">
             <img src="/meetbowl.png"></img>
           </div>
-          <div>
+          <div className="desc-container">
             <h3>KumalaJingga</h3>
             <h4>2019-2020</h4>
             <p>Web Development service that provide Industrial needs</p>
           </div>
         </div>
-        <div>
+        <div className="desc-container">
           <div className="img-project">
             <img src="/etome.png"></img>
           </div>

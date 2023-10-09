@@ -297,6 +297,9 @@ body:not(.mobile) .list-text:hover + .img-project img{
 
   .img-project img{
 height: 300px;
+
+
+
   }
 
   .react-multi-carousel-track {
@@ -313,8 +316,12 @@ height: 300px;
 }
 .react-multi-carousel-list.carousel-container ul{
   height: 100vh;
+  
 
 }
+
+ 
+
 
 /* slide */
 

@@ -45,3 +45,6 @@
     will-change: transform,transition;
     margin-bottom: 200px;
 }
+.desc-container {
+    margin-top: 50px;
+}
