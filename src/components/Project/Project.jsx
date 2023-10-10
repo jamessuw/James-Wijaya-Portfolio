@@ -56,22 +56,29 @@ function Project() {
   
 const projects = [
   {
-    imgSrc: '/CD.png',
+    imgSrc: '/KumalaJingga.png',
     projectName: 'KumalaJingga',
+    date: '2019-2020',
+    description:
+      'Filler text is text that shares some characteristics of a real written text, but is random or otherwise generated. It may be used to display a sample of fonts, generate text for testing, or to spoof an e-mail spam filter.',
+  },
+  {
+    imgSrc: '/CD.png',
+    projectName: 'ClearDynamics',
     date: '2019-2020',
     description:
       'Filler text is text that shares some characteristics of a real written text, but is random or otherwise generated. It may be used to display a sample of fonts, generate text for testing, or to spoof an e-mail spam filter.',
   },
   {
     imgSrc: '/meetbowl.png',
-    projectName: 'KumalaJingga',
+    projectName: 'MeetBowl',
     date: '2019-2020',
     description:
       'Filler text is text that shares some characteristics of a real written text, but is random or otherwise generated. It may be used to display a sample of fonts, generate text for testing, or to spoof an e-mail spam filter.',
   },
   {
     imgSrc: '/etome.png',
-    projectName: 'KumalaJingga',
+    projectName: 'Etome',
     date: '2019-2020',
     description:
       'Filler text is text that shares some characteristics of a real written text, but is random or otherwise generated. It may be used to display a sample of fonts, generate text for testing, or to spoof an e-mail spam filter.',
@@ -80,6 +87,7 @@ const projects = [
 
   return (
     <section id="project-section-container">
+      <div className="container-1">
       <div data-speed="0.5" className="box1">
         <h1>PROJECT</h1>
       </div>
@@ -92,16 +100,17 @@ const projects = [
       {/* Wrap each project inside a separate div */}
       <div className="img-project">
         <img src={project.imgSrc} alt={`Project ${index}`} />
-      </div>
+      </div> 
+      <span className="heading-project-ul"><h3>{project.projectName}</h3></span>
       <span className="line"></span>
       <div className="desc-container">
-        <h3>{project.projectName}</h3>
+       
         <h4>{project.date}</h4>
         <p>{project.description}</p>
       </div>
     </div>
   ))}
-</Carousel>
+</Carousel></div>
     </section>
   );
 }
