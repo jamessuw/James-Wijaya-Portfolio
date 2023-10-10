@@ -53,6 +53,31 @@ function Project() {
     },
   };
 
+  
+const projects = [
+  {
+    imgSrc: '/CD.png',
+    projectName: 'KumalaJingga',
+    date: '2019-2020',
+    description:
+      'Filler text is text that shares some characteristics of a real written text, but is random or otherwise generated. It may be used to display a sample of fonts, generate text for testing, or to spoof an e-mail spam filter.',
+  },
+  {
+    imgSrc: '/meetbowl.png',
+    projectName: 'KumalaJingga',
+    date: '2019-2020',
+    description:
+      'Filler text is text that shares some characteristics of a real written text, but is random or otherwise generated. It may be used to display a sample of fonts, generate text for testing, or to spoof an e-mail spam filter.',
+  },
+  {
+    imgSrc: '/etome.png',
+    projectName: 'KumalaJingga',
+    date: '2019-2020',
+    description:
+      'Filler text is text that shares some characteristics of a real written text, but is random or otherwise generated. It may be used to display a sample of fonts, generate text for testing, or to spoof an e-mail spam filter.',
+  },
+];
+
   return (
     <section id="project-section-container">
       <div data-speed="0.5" className="box1">
@@ -61,57 +86,22 @@ function Project() {
       <div data-speed="0.5" className="box2">
         <h2>ARC`HIVE</h2>
       </div>
-      <Carousel
-        responsive={responsive}
-        containerClass="carousel-container"
-        infinite={true}
-      >
-        <div>
-          <div className="img-project">  
-           <img src="/KumalaJingga.png"></img>
-          </div>
-          <span className="line"></span>
-          <div className="desc-container">
-           <h3>KumalaJingga</h3>
-            <h4>2019-2020</h4>
-            <p>Web Development service that provide Industrial needs</p>
-          </div>
-        </div>
-        <div>
-          <div className="img-project">
-            <img src="/CD.png"></img>
-          </div>
-          <span className="line"></span>
-          <div className="desc-container">
-            <h3>KumalaJingga</h3>
-            <h4>2019-2020</h4>
-            <p>Web Development service that provide Industrial needs</p>
-          </div>
-        </div>
-        <div>
-          <div className="img-project">
-            <img src="/meetbowl.png"></img>
-          </div>
-          <span className="line"></span>
-          <div className="desc-container">
-            <h3>KumalaJingga</h3>
-            <h4>2019-2020</h4>
-            <p>Web Development service that provide Industrial needs</p>
-          </div>
-        </div>
-        <div className="desc-container">
-          <div className="img-project">
-            <img src="/etome.png"></img>
-          </div>
-          <span className="line"></span>
-          <div>
-            <h3>KumalaJingga</h3>
-            <h4>2019-2020</h4>
-            <p>Web Development service that provide Industrial needs</p>
-          </div>
-        </div>
-      </Carousel>
-      ;
+      <Carousel responsive={responsive} containerClass="carousel-container" infinite={true}>
+  {projects.map((project, index) => (
+    <div key={index} className="project-list-container">
+      {/* Wrap each project inside a separate div */}
+      <div className="img-project">
+        <img src={project.imgSrc} alt={`Project ${index}`} />
+      </div>
+      <span className="line"></span>
+      <div className="desc-container">
+        <h3>{project.projectName}</h3>
+        <h4>{project.date}</h4>
+        <p>{project.description}</p>
+      </div>
+    </div>
+  ))}
+</Carousel>
     </section>
   );
 }

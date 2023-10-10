@@ -7,6 +7,9 @@
    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
    padding: 35px;
    height: 100vh;
+   background-image: linear-gradient(rgba(194, 196, 194, 0.159) .1em, transparent .1em), linear-gradient(90deg, rgba(161, 162, 161, 0.186) .1em, transparent .1em);
+   background-size: 3em 3em;
+
   
 }
 .project-head{
@@ -245,7 +248,7 @@ font-size: 6.5rem;
 }
 .img-project {
 z-index: 100;
-width: 600px;
+width: 550px;
 }
 #project-container{
     display: flex;
@@ -316,6 +319,7 @@ height: 300px;
 }
 .react-multi-carousel-list.carousel-container ul{
   height: 100vh;
+  margin-top: 100px;
   
 
 }
@@ -327,7 +331,11 @@ height: 300px;
   height: 0.5px;
 }
  
+.project-list-container{
+  margin: 60px;
+    display: block;
 
+}
 
 /* slide */
 
