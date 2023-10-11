@@ -61,6 +61,9 @@ const projects = [
     date: '2019-2020',
     description:
       'Filler text is text that shares some characteristics of a real written text, but is random or otherwise generated. It may be used to display a sample of fonts, generate text for testing, or to spoof an e-mail spam filter.',
+      service:'WebDev',
+      location:'Indonesia',
+      tech:'Wordpress'
   },
   {
     imgSrc: '/CD.png',
@@ -68,6 +71,9 @@ const projects = [
     date: '2019-2020',
     description:
       'Filler text is text that shares some characteristics of a real written text, but is random or otherwise generated. It may be used to display a sample of fonts, generate text for testing, or to spoof an e-mail spam filter.',
+      service:'Professionals',
+      location:'Australia',
+      tech:'Front-end',
   },
   {
     imgSrc: '/meetbowl.png',
@@ -75,14 +81,21 @@ const projects = [
     date: '2019-2020',
     description:
       'Filler text is text that shares some characteristics of a real written text, but is random or otherwise generated. It may be used to display a sample of fonts, generate text for testing, or to spoof an e-mail spam filter.',
-  },
+      service:'WebDev',
+      location:'Australia',
+      tech:'SquareSpace'
+    },
   {
     imgSrc: '/etome.png',
     projectName: 'Etome',
     date: '2019-2020',
     description:
       'Filler text is text that shares some characteristics of a real written text, but is random or otherwise generated. It may be used to display a sample of fonts, generate text for testing, or to spoof an e-mail spam filter.',
-  },
+      service:'WebDev',
+      location:'Indonesia',
+      tech:'Shopify'
+
+    },
 ];
 
   return (
@@ -98,14 +111,19 @@ const projects = [
   {projects.map((project, index) => (
     <div key={index} className="project-list-container">
       {/* Wrap each project inside a separate div */}
-      <div className="img-project">
-        <img src={project.imgSrc} alt={`Project ${index}`} />
+      <div className="img-project-conatiner">
+        <img className="img-project" src={project.imgSrc} alt={`Project ${index}`} />
       </div> 
       <span className="heading-project-ul"><h3>{project.projectName}</h3></span>
       <span className="line"></span>
       <div className="desc-container">
+        <div className="pill-container">
+       <div className="pill">{project.service}</div>
+       <div className="pill">{project.location}</div>
+       <div className="pill">{project.tech}</div>
        
-        <h4>{project.date}</h4>
+       </div>
+        <span className="project-date"><h4>{project.date}</h4></span>
         <p>{project.description}</p>
       </div>
     </div>

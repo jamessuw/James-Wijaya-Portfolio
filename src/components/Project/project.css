@@ -248,7 +248,7 @@ font-size: 6.5rem;
 }
 .img-project {
 z-index: 100;
-width: 550px;
+width:390px;
 }
 #project-container{
     display: flex;
@@ -298,12 +298,13 @@ body:not(.mobile) .list-text:hover + .img-project img{
   }
 
 
-  .img-project img{
-height: 300px;
+  .img-project-conatiner {
+    height: 215px;
 
-
-
-  }
+}
+  .img-project img {
+    height: 24vh;
+}
 
   .react-multi-carousel-track {
     list-style: none;
@@ -319,7 +320,7 @@ height: 300px;
 }
 .react-multi-carousel-list.carousel-container ul{
   height: 100vh;
-  margin-top: 100px;
+  margin-top: 40px;
   
 
 }
@@ -343,7 +344,24 @@ span.heading-project-ul {
    margin-top: 25px;
 
 }
+.pill-container{
+  display: inline-flex;
+justify-content: space-evenly;
+margin: 10px;
 
+  width: 75%;
+  object-position: left;
+  margin-left: 0;
+}
+.pill{
+  display: block;
+  border: solid 0.5px rgb(52, 51, 51);
+  border-radius: 10px;
+  padding: 10px;
+}
+.project-date h4{
+  font-size: 1.3rem;
+}
 /* slide */
 
 
