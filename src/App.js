@@ -13,7 +13,6 @@ import { useEffect } from 'react';
 
 
 
-
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
