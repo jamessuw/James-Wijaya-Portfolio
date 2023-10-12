@@ -265,6 +265,11 @@ section >h2 {
   /*=========================== Media Queries (Medium Device) =================*/
   @media screen and (max-width :1024px){
 
+    section{
+        border-radius: 0%!important;
+    }
+
+
     .container {
         width: var(--container-width-md);
         display: block;
@@ -286,6 +291,10 @@ section >h2 {
   }
  /*=========================== Media Queries (Small Device) =================*/
  @media screen and (max-width :1024px){
+
+    section{
+        border-radius: 0%!important;
+    }
   
 
     h1{
