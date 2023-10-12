@@ -38,7 +38,7 @@ function Contact() {
   };
 
   return (
-    <div id="contact-section">
+    <section id="contact-section">
       <span className="heading-project">
         {" "}
         <div className="singleLine">
@@ -109,7 +109,7 @@ function Contact() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

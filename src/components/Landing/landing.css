@@ -264,6 +264,7 @@ canvas {
         flex-direction: column;
         text-align: center;
         flex-direction: column;
+        flex-direction: column-reverse;
     }
     
 

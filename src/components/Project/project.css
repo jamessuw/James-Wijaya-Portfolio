@@ -375,6 +375,7 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
     position: absolute;
   top:65%;
   }
+  
 
 
   @media screen and (max-width: 768px) {
@@ -429,5 +430,21 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
     position: absolute;
   top:70%;
   }
+  .pill-container {
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 10px;
+    width: 100%;
+    object-position: left;
+    margin-left: 0px;
+
+}
+.desc-container {
+  text-align: center;
+}
+span.heading-project-ul {
+  text-align: center;
+  margin-top: 25px;
+}
   
   }
