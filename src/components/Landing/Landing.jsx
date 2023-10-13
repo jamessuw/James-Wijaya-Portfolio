@@ -3,21 +3,24 @@ import "./landing.css";
 import Blob from "../Landing/Blob.jsx";
 import { Canvas } from "@react-three/fiber";
 import { TypeAnimation } from "react-type-animation";
+import RevealAnimation from "../Animation/RevealAnimation";
+
 
 function Landing() {
   return (
     <section id="sct-landing-mobile" className="Landing-section">
       <div className="container" id="landing-container">
         <div className="container-1" id="landing-page">
-          <div className="binary-cube">
+            <RevealAnimation><div className="binary-cube">
             <div className="blob-container">
+            
               <Canvas  camera={{ position: [0.0, 0.0, 8.0] }} shadow
         
               >
                 <Blob />
               </Canvas>
             </div>
-          </div>
+          </div></RevealAnimation>
 
           <div className="container-text">
             <div className="landing-text">

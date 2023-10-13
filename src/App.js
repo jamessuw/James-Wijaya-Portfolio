@@ -9,13 +9,16 @@ import Contact from './components/Contact/Contact';
 import Lab from './components/Lab/Lab';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from 'react';
+import { useEffect, useState,CSSProperties } from 'react';
+
 
 
 
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
+
+
   useEffect(() => {
     const mediaQueryHandler = () => {
       const sections = gsap.utils.toArray('.panel');
@@ -68,31 +71,32 @@ function App() {
   ScrollTrigger.config({ 
     ignoreMobileResize: true
   });
-  return (
-    <>
-      {/* <ParticleComp/> */}
-      <div className="smooth-scroll-target">
-      <NavMenu/>
-    <section class="panel">
-    <Landing/>
-    </section>
-    <section class="panel">
-     <About/>
-    </section>
-    <section className='panel'>
-    <Project/>
-    </section>
-   
-    <section class="panel">
-    <Lab/>
-   </section>
-    <section class="panel">
-    <Contact/>
-   </section>
-   </div>
-      </>
+  
 
-);
+
+  return (
+
+  <div className="smooth-scroll-target">
+    <>
+          <NavMenu />
+          <section className="panel">
+            <Landing />
+          </section>
+          <section className="panel">
+            <About />
+          </section>
+          <section className='panel'>
+            <Project />
+          </section>
+          <section className="panel">
+            <Lab />
+          </section>
+          <section className="panel">
+            <Contact />
+          </section>
+        </>
+    </div>
+  );
 }
 
 export default App;

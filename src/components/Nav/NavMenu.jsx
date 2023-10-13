@@ -1,4 +1,6 @@
 import "./nav.css";
+import RevealAnimation from "../Animation/RevealAnimation";
+
 
 import {
   Collapse,
@@ -24,10 +26,13 @@ const NavMenu = (props) => {
   
 
   return (
-    <div>
+
+ <div>
+     <RevealAnimation>   
       <Navbar className="container" dark expand="md">
         <div className="container" id="Nav-container">
-          <div className="circle-nav"></div>
+               
+  <div className="circle-nav"></div>
           <span className="tag-nav">
             <span class="heading block-reveal">
               <span className="block-reveal">
@@ -39,10 +44,13 @@ const NavMenu = (props) => {
             </span>
           </span>
         </div>
+        
 
-        <NavbarToggler onClick={toggle} />
+      
+
+       <NavbarToggler onClick={toggle} />
         <Collapse className="justify-content-end" isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
+       <Nav className="mr-auto" navbar>
             <NavItem>
               <NavLink className="Nav-Link" href="#About-section">
                 About
@@ -66,6 +74,7 @@ const NavMenu = (props) => {
           </Nav>
         </Collapse>
       </Navbar>
+    </RevealAnimation>  
     </div>
   );
 };

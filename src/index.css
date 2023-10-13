@@ -87,7 +87,11 @@ canvas{
     pointer-events: none;
     touch-action: auto;
 }
-
+.loading-position{
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
 
 
 
