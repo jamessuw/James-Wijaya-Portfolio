@@ -64,6 +64,25 @@ section{
       box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 
 }
+
+section#sct-landing-mobile {
+
+
+
+height: 100vh;
+  
+width: 100%;
+height: 100%;
+overflow-y: hidden;
+display: block;
+position: relative;
+pointer-events: none;
+transform: none!important;
+clip-path: none !important;
+box-shadow:none !important;
+}
+
+
 h1,h2,h3,h4,h5,h6{
     margin: 0;
 }

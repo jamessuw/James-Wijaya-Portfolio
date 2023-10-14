@@ -1,6 +1,17 @@
-.Landing-section {
+.Landing-section section{
     height: 100vh;
-}
+  
+        width: 100%;
+        height: 100%;
+        overflow-y: hidden;
+        display: block;
+        position: relative;
+        pointer-events: none;
+        transform: none!important;
+        clip-path: none !important;
+        box-shadow:none !important;
+    }
+
 
 
 .pill-design {

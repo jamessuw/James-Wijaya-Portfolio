@@ -99,9 +99,9 @@ function App() {
   <div className="smooth-scroll-target">
         <>
           <NavMenu />
-          <section className="panel">
+          <div className="panel">
             <Landing />
-          </section>
+          </div>
           <section className="panel">
             <About />
           </section>
