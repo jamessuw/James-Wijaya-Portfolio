@@ -425,10 +425,12 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
 button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
   position: absolute;
   top:70%;
+  z-index: 999;
   }
   button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
     position: absolute;
   top:70%;
+  z-index: 999;
   }
   .pill-container {
     display: inline-flex;

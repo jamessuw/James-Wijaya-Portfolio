@@ -30,6 +30,8 @@ const NavMenu = (props) => {
  <div>
      <RevealAnimation>   
       <Navbar className="container" dark expand="md">
+
+        
         <div className="container" id="Nav-container">
                
   <div className="circle-nav"></div>

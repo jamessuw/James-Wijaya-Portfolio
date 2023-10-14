@@ -10,16 +10,36 @@ import Lab from './components/Lab/Lab';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useState,CSSProperties } from 'react';
+import PacmanLoader from "react-spinners/PacmanLoader";
+
+const override: CSSProperties = {
+  display: "block",
+  margin: "0 auto",
+  marginTop:"25%",
+  borderRadius:"0%",
+  width:"200px"
+  
+
+
+};
 
 
 
-
-gsap.registerPlugin(ScrollTrigger);
 
 function App() {
-
+ 
+  const [loading, setLoading] = useState(true);
+  
 
   useEffect(() => {
+    // Simulate loading for 5 seconds
+    setTimeout(() => {
+      setLoading(false);
+    }, 5000);
+  }, []);
+ gsap.registerPlugin(ScrollTrigger);
+  useEffect(() => {
+   
     const mediaQueryHandler = () => {
       const sections = gsap.utils.toArray('.panel');
   
@@ -77,7 +97,7 @@ function App() {
   return (
 
   <div className="smooth-scroll-target">
-    <>
+        <>
           <NavMenu />
           <section className="panel">
             <Landing />
@@ -95,6 +115,7 @@ function App() {
             <Contact />
           </section>
         </>
+   
     </div>
   );
 }

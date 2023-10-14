@@ -15,7 +15,7 @@ function Blob() {
       u_time: { value: 0 },
       u_intensity: { value: 0.3 },
     };
-  });
+  }, []);
 
   useFrame((state) => {
     const { clock } = state;
@@ -57,8 +57,14 @@ function Blob() {
       {/* This plane is used for scrolling */}
       <mesh
         position={[0, 0, -5]} // Adjust the position to create a "scrollable" effect
-        onPointerOver={() => (hover.current = true)}
-        onPointerOut={() => (hover.current = false)}
+        onPointerOver={(event) => {
+          event.stopPropagation();
+          hover.current = true;
+        }}
+        onPointerOut={(event) => {
+          event.stopPropagation();
+          hover.current = false;
+        }}
         scale={[2.2, 2.2, 2.2]}
       >
         <planeGeometry args={[2, 2]} />
