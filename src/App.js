@@ -57,6 +57,7 @@ function App() {
             pin: true,
             pinSpacing: false,
             start: "top top",
+         
             end: () => `+=${panelHeight + window.innerHeight}`, // Adjust the end point
             onUpdate: self => console.log("progress:", self.progress),
           },
