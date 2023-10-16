@@ -1,46 +1,57 @@
-.Landing-section section{
+.Landing-section {
     height: 100vh;
-  
-        width: 100%;
-        height: 100%;
-        overflow-y: hidden;
-        display: block;
-        position: relative;
-        pointer-events: none;
-        transform: none!important;
-        clip-path: none !important;
-        box-shadow:none !important;
-    }
+
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    display: block;
+    position: relative;
+    pointer-events: none;
+    transform: none !important;
+    clip-path: none !important;
+    box-shadow: none !important;
+}
+
+.tagline-landing {
+
+    position: absolute;
+    /* position: relative; */
+    top: 60%;
+    z-index: 999;
+    color: #615d5d;
 
 
+}
 
 .pill-design {
-    
-        background-color: #0c3df6cf;
-        height: 55%;
-        display: block;
-        width: 100%;
-        text-align: center;
-        border-radius: 30px;
-        margin-bottom: 10px;
-        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-        color: #ffffffff;
-        text-transform: capitalize;
-        padding: 11px;
-        /* border: solid 1px; */
-        pointer-events: auto;
-        transition: 1s;
-        margin: 10px;
-    
+
+    background-color: #0c3df6cf;
+    height: 55%;
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    color: #ffffffff;
+    text-transform: capitalize;
+    padding: 11px;
+    /* border: solid 1px; */
+    pointer-events: auto;
+    transition: 1s;
+    margin: 10px;
+
 
 }
-.pill-design a{
+
+.pill-design a {
     color: #ffffff;
 }
-.landing-catalog h1{
-    
-        font-weight: 500;
-    
+
+.landing-catalog h1 {
+
+    font-weight: 500;
+
 }
 
 
@@ -79,17 +90,19 @@ canvas {
     width: 100%;
     justify-content: center;
     position: relative;
-   
+
 
 }
-@media screen and (min-width: 1880px)  {
 
-    .binary-cube{
-    height: 700px;
-   
+@media screen and (min-width: 1880px) {
+
+    .binary-cube {
+        height: 700px;
+
+    }
+
 }
 
-}
 #landing-page {
     border-radius: 70px;
     padding: 10px;
@@ -277,7 +290,7 @@ canvas {
         flex-direction: column;
         flex-direction: column-reverse;
     }
-    
+
 
     .landing-catalog {
         margin-top: 50px;

@@ -11,6 +11,13 @@ function Landing() {
     <section id="sct-landing-mobile" className="Landing-section">
       <div className="container" id="landing-container">
         <div className="container-1" id="landing-page">
+          
+          <div className="tagline-landing">
+            <h1>HELLO, James Wijaya</h1>
+            <h4>Develop  and design with purposed</h4>
+          
+          
+          </div>
             <RevealAnimation><div className="binary-cube">
             <div className="blob-container">
             
