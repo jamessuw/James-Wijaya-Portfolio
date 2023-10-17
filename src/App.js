@@ -11,6 +11,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useState,CSSProperties } from 'react';
 import PacmanLoader from "react-spinners/PacmanLoader";
+import Loading from './components/Loading/Loading';
 
 const override: CSSProperties = {
   display: "block",
@@ -30,95 +31,83 @@ function App() {
  
   const [loading, setLoading] = useState(true);
   
-
   useEffect(() => {
-    // Simulate loading for 5 seconds
+    // Simulate an API call or any async operation
     setTimeout(() => {
-      setLoading(false);
-    }, 5000);
-  }, []);
- gsap.registerPlugin(ScrollTrigger);
-  useEffect(() => {
-   
-    const mediaQueryHandler = () => {
-      const sections = gsap.utils.toArray('.panel');
-  
-      ScrollTrigger.config({
-        ignoreMobileResize: true,
-      });
-  
-      sections.forEach((panel, i) => {
-        const panelHeight = panel.clientHeight;
-  
-        gsap.to(panel, {
-          scrollTrigger: {
-            trigger: panel,
-            scrub: 2,
-            pin: true,
-            pinSpacing: false,
-            start: "top top",
-         
-            end: () => `+=${panelHeight + window.innerHeight}`, // Adjust the end point
-            onUpdate: self => console.log("progress:", self.progress),
-          },
+      setLoading(false); // Set loading to false after the data is loaded
+    }, 2000); // Simulated loading time: 2 seconds
+  }, []); // Empty dependency array ensures useEffect runs once after initial render
+
+
+
+
+useEffect(() => {
+    if (!loading) {
+      const mediaQueryHandler = () => {
+        const sections = gsap.utils.toArray('.panel');
+        ScrollTrigger.config({
+          ignoreMobileResize: true,
         });
-      });
-    };
-  
-    const mm = window.matchMedia('(min-width: 800px)');
-
-    if (mm.matches) {
-      mediaQueryHandler();
-    }
-
-    const mediaQueryListener = (event) => {
-      if (event.matches) {
+        sections.forEach((panel, i) => {
+          const panelHeight = panel.clientHeight;
+          gsap.to(panel, {
+            scrollTrigger: {
+              trigger: panel,
+              scrub: 2,
+              pin: true,
+              pinSpacing: false,
+              start: 'top top',
+              end: () => `+=${panelHeight + window.innerHeight}`, // Adjust the end point
+              onUpdate: self => console.log('progress:', self.progress),
+            },
+          });
+        });
+      };
+      const mm = window.matchMedia('(min-width: 800px)');
+      if (mm.matches) {
         mediaQueryHandler();
-      } else {
-        // Optional: Custom cleanup code here (runs when it stops matching)
       }
-    };
+      const mediaQueryListener = (event) => {
+        if (event.matches) {
+          mediaQueryHandler();
+        } else {
+          // Optional: Custom cleanup code here (runs when it stops matching)
+        }
+      };
+      mm.addListener(mediaQueryListener);
+      return () => {
+        mm.removeListener(mediaQueryListener);
+      };
+    }
+  }, [loading]);
 
-    mm.addListener(mediaQueryListener);
-
-    return () => {
-      mm.removeListener(mediaQueryListener);
-    };
-  }, []);
-
-
-  
-
-  ScrollTrigger.config({ 
-    ignoreMobileResize: true
-  });
-  
 
 
   return (
-
-  <div className="smooth-scroll-target">
-        <>
-          <NavMenu />
-          <div className="panel">
-            <Landing />
-          </div>
-          <section className="panel">
-            <About />
-          </section>
-          <section className='panel'>
-            <Project />
-          </section>
-          <section className="panel">
-            <Lab />
-          </section>
-          <section className="panel">
-            <Contact />
-          </section>
-        </>
-   
-    </div>
-  );
+    <div className={`App ${loading ? 'loading' : ''}`}>
+    <Loading active={loading} />
+    {!loading && (
+      <>
+        <NavMenu />
+        <div className="panel">
+          <Landing />
+        </div>
+        <section className="panel">
+          <About />
+        </section>
+        <section className='panel'>
+          <Project />
+        </section>
+        <section className="panel">
+          <Lab />
+        </section>
+        <section className="panel">
+          <Contact />
+        </section>
+      </>
+    )}
+  </div>
+);
 }
 
 export default App;
