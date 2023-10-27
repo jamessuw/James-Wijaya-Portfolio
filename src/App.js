@@ -13,18 +13,6 @@ import { useEffect, useState,CSSProperties } from 'react';
 import PacmanLoader from "react-spinners/PacmanLoader";
 import Loading from './components/Loading/Loading';
 
-const override: CSSProperties = {
-  display: "block",
-  margin: "0 auto",
-  marginTop:"25%",
-  borderRadius:"0%",
-  width:"200px"
-  
-
-
-};
-
-
 
 
 function App() {

@@ -134,6 +134,9 @@ canvas {
     flex-direction: column;
 
 }
+.spacing p{
+    text-align: center;
+}
 
 .landing-catalog {
     display: inline-flex;
