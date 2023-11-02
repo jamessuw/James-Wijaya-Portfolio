@@ -13,7 +13,7 @@ function Landing() {
         <div className="container-1" id="landing-page">
           
           <div className="tagline-landing">
-            <h1>HELLO, James Wijaya</h1>
+            <h1>James Wijaya</h1>
             <h4>Develop  and design with purposed</h4>
           
           
