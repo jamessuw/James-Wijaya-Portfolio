@@ -20,3 +20,15 @@ font-size: 5rem;
         height: 100vh;
     }
 
+  .lab-section h2{
+    text-align: center;
+}
+.lab-section h1{
+    text-align: center;
+}
+.lab-section{
+  
+        width: 100%;
+        display: block;
+    
+}

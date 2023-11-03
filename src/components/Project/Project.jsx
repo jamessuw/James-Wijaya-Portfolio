@@ -24,7 +24,7 @@ function Project() {
     });
 
     gsap.to(".box2", {
-      xPercent: -65,
+      xPercent: -70,
       ease: "power1.inOut",
       scrollTrigger: {
         trigger: ".box2", // Change trigger to '.box2'
@@ -77,7 +77,7 @@ const projects = [
   {
     imgSrc: '/meetbowl.png',
     projectName: 'MeetBowl',
-    date: '2019-2020',
+    date: '2021',
     description:'MEETBOWL is an Indonesian restaurant located in Melbourne, Australia, aiming to introduce authentic Indonesian cuisine to the local community. I was tasked with enhancing their online presence. Leveraging Squarespace, I meticulously crafted their website employing a technology stack comprising HTML5, CSS, and JavaScript. Through the strategic integration of JavaScript, HTML, and CSS code, I created a tailored user interface and implemented a seamless system connecting the restaurant with a food delivery application. Additionally, I implemented fundamental SEO practices to optimize their \'website\'s  visibility and ranking on Google.',
       service:'WebDev',
       location:'Australia',
@@ -86,9 +86,8 @@ const projects = [
   {
     imgSrc: '/etome.png',
     projectName: 'Etome',
-    date: '2019-2020',
-    description:
-      'Filler text is text that shares some characteristics of a real written text, but is random or otherwise generated. It may be used to display a sample of fonts, generate text for testing, or to spoof an e-mail spam filter.',
+    date: '2020',
+    description:'Etome is a distinguished clothing brand dedicated to utilizing sustainable materials sourced from Indonesia. I had the privilege of working closely with the \'brand\'s owner, who envisioned a website emphasizing unique designs and showcasing their environmentally conscious materials. Employing Shopify as the foundation, I meticulously developed the website, utilizing custom code implemented through Liquid, CSS, HTML, and Ruby. I tailored their theme and crafted a bespoke user interface, enhancing the overall aesthetic and functionality of their online platform.',
       service:'WebDev',
       location:'Indonesia',
       tech:'Shopify'
@@ -113,6 +112,7 @@ const projects = [
         <img className="img-project" src={project.imgSrc} alt={`Project ${index}`} />
       </div> 
       <span className="heading-project-ul"><h3>{project.projectName}</h3></span>
+              <span className="project-date"><h4>{project.date}</h4></span>
       <span className="line"></span>
       <div className="desc-container">
         <div className="pill-container">
@@ -121,7 +121,7 @@ const projects = [
        <div className="pill">{project.tech}</div>
        
        </div>
-        <span className="project-date"><h4>{project.date}</h4></span>
+
         <p>{project.description}</p>
       </div>
     </div>

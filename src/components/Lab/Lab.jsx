@@ -15,8 +15,9 @@ function Lab() {
         <div className="container-1">
           <div className="comming-soon-container">
             <RevealAnimation>
-                <h1>" THE LAB "</h1>
-              <h2> COMMING SOON!</h2>
+              <div className="lab-section">
+                <h1>THE LAB</h1>
+              <h2> COMMING SOON!</h2></div>
             </RevealAnimation>
           </div>
         </div>

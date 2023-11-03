@@ -80,10 +80,11 @@ transition: 0.3s;
 
 }
 
-  .box2{
-    position: relative;
-    text-align: end;
-
+.box2 {
+  display: block;
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
 
   }
 
