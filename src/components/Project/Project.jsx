@@ -58,9 +58,9 @@ const projects = [
   {
     imgSrc: '/KumalaJingga.png',
     projectName: 'KumalaJingga',
-    date: '2019-2020',
+    date: '2022',
     description:
-      'Filler text is text that shares some characteristics of a real written text, but is random or otherwise generated. It may be used to display a sample of fonts, generate text for testing, or to spoof an e-mail spam filter.',
+      'KumalaJingga is an esteemed industrial supply company headquartered in Indonesia. The organization sought to enhance its digital footprint and online presence. I successfully revamped their website, ensuring effortless maintenance by leveraging WordPress as the core platform. The website was meticulously crafted using cutting-edge technologies including HTML5, CSS, JavaScript, and PHP.',
       service:'WebDev',
       location:'Indonesia',
       tech:'Wordpress'
@@ -68,9 +68,8 @@ const projects = [
   {
     imgSrc: '/CD.png',
     projectName: 'ClearDynamics',
-    date: '2019-2020',
-    description:
-      'Filler text is text that shares some characteristics of a real written text, but is random or otherwise generated. It may be used to display a sample of fonts, generate text for testing, or to spoof an e-mail spam filter.',
+    date: '2021-2022',
+    description:'Clear Dynamics stands as a pioneering software company renowned for delivering unparalleled business solutions through state-of-the-art technology integration, including advanced AI implementations. I had the privilege of serving as their Frontend Developer, overseeing a multitude of projects, including the development of their \'About Us\' website page.',
       service:'Professionals',
       location:'Australia',
       tech:'Front-end',
@@ -79,8 +78,7 @@ const projects = [
     imgSrc: '/meetbowl.png',
     projectName: 'MeetBowl',
     date: '2019-2020',
-    description:
-      'Filler text is text that shares some characteristics of a real written text, but is random or otherwise generated. It may be used to display a sample of fonts, generate text for testing, or to spoof an e-mail spam filter.',
+    description:'MEETBOWL is an Indonesian restaurant located in Melbourne, Australia, aiming to introduce authentic Indonesian cuisine to the local community. I was tasked with enhancing their online presence. Leveraging Squarespace, I meticulously crafted their website employing a technology stack comprising HTML5, CSS, and JavaScript. Through the strategic integration of JavaScript, HTML, and CSS code, I created a tailored user interface and implemented a seamless system connecting the restaurant with a food delivery application. Additionally, I implemented fundamental SEO practices to optimize their \'website\'s  visibility and ranking on Google.',
       service:'WebDev',
       location:'Australia',
       tech:'SquareSpace'
