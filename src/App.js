@@ -15,6 +15,7 @@ import Loading from './components/Loading/Loading';
 
 
 
+
 function App() {
  
   const [loading, setLoading] = useState(true);
@@ -26,7 +27,19 @@ function App() {
     }, 2000); // Simulated loading time: 2 seconds
   }, []); // Empty dependency array ensures useEffect runs once after initial render
 
+  const [percentage, setPercentage] = useState(0);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPercentage(prevPercentage => {
+        // Increment the percentage by a certain value (for example, 1) until it reaches 100
+        return prevPercentage < 100 ? prevPercentage + 1 : prevPercentage;
+      });
+    }, 18); // Update every 1 second
+
+    // Clear the interval when the component unmounts or when loading is complete
+    return () => clearInterval(interval);
+  }, []); // Empty dependency array ensures the effect runs once after the initial render
 
 
 useEffect(() => {
@@ -73,7 +86,7 @@ useEffect(() => {
 
   return (
     <div className={`App ${loading ? 'loading' : ''}`}>
-    <Loading active={loading} />
+    <Loading active={loading} percentage={percentage} />
     {!loading && (
       <>
         <NavMenu />
