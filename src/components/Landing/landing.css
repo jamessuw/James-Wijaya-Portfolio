@@ -210,6 +210,14 @@ canvas {
 
 @media screen and (max-width: 988px) {
 
+    .tagline-landing {
+      
+            top: 0;
+            text-align: center;
+           
+        
+    }
+
     .pill-design {
         width: 100%;
 

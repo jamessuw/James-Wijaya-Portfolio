@@ -14,7 +14,7 @@ const Loading = ({ percentage, active }) => {
           <div className="percentage-label">{percentage}%</div>
         </div>
       ) : (
-        <div className="completion-message"><h4>Loading complete!</h4></div>
+        <div className="completion-message"><h4>LOADING COMPLETE!</h4></div>
       )}
     </div>
   );

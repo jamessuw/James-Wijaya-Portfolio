@@ -5,7 +5,7 @@
   left: -100%; /* Initially position the loading screen outside the viewport */
   width: 100vw;
   height: 100vh;
-  background-color: rgba(236, 226, 226, 0.8); /* Semi-transparent background */
+  background-color: rgba(236, 226, 226,0.1); /* Semi-transparent background */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,7 +38,7 @@
   }
 }
 .completion-massage{
-  font-weight: 600;
+  font-weight: 700;
   font-size: 30px;
 
 }
