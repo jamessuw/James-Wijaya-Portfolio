@@ -78,7 +78,7 @@ const projects = [
     imgSrc: '/meetbowl.png',
     projectName: 'MeetBowl',
     date: '2021',
-    description:'MEETBOWL is an Indonesian restaurant located in Melbourne, Australia, aiming to introduce authentic Indonesian cuisine to the local community. I was tasked with enhancing their online presence. Leveraging Squarespace, I meticulously crafted their website employing a technology stack comprising HTML5, CSS, and JavaScript. Through the strategic integration of JavaScript, HTML, and CSS code, I created a tailored user interface and implemented a seamless system connecting the restaurant with a food delivery application. Additionally, I implemented fundamental SEO practices to optimize their \'website\'s  visibility and ranking on Google.',
+    description:'MEETBOWL is an Indonesian restaurant located in Melbourne, Australia, aiming to introduce authentic Indonesian cuisine to the local community. I was tasked with enhancing their online presence. Through the strategic integration of JavaScript, HTML, and CSS code, I created a tailored user interface Squarespace and implemented a seamless system connecting the restaurant with a food delivery application. Additionally, I implemented fundamental SEO practices to optimize their \'website\'s  visibility and ranking on Google.',
       service:'WebDev',
       location:'Australia',
       tech:'SquareSpace'

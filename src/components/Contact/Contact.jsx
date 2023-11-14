@@ -56,8 +56,8 @@ function Contact() {
             <div class="blob"></div>
             <RevealAnimation>
               <p className="tag-contact reveal">
-                IM CURRENTLY OPEN FOR PROJETC <br></br>
-                FEEL FREE TO REACH OUT ILL CONTACT<br></br>AS SOON AS I CAN
+                IM CURRENTLY OPEN FOR PROJECT <br></br>
+                FEEL FREE TO REACH OUT ILL REPLIED<br></br>AS SOON AS I CAN
                 THANK YOU
               </p>
             </RevealAnimation>
