@@ -15,6 +15,16 @@ function Landing() {
           <div className="tagline-landing">
             <h1>James Wijaya</h1>
             <h4>Develop  and design with purposed</h4>
+            <TypeAnimation
+                sequence={[
+                  "Hi, welcome to my portfolio! Feel free to browse around and dont be shy to reach out. More update are comming soon!",
+                  1000,
+                ]}
+                wrapper="span"
+                speed={50}
+                style={{ fontSize: "0.8em", width: "50%", fontWeight: 500 }}
+                repeat={Infinity}
+              ></TypeAnimation>
           
           
           </div>
@@ -32,7 +42,7 @@ function Landing() {
           <div className="container-text">
             <div className="landing-text">
               {/* <h1>{text}</h1> */}
-              <span className="pill-design">
+              {/* <span className="pill-design">
                 Send Massages
               </span>
               <span className="pill-design">
@@ -43,7 +53,7 @@ function Landing() {
                 <a href="#" title="LinkedIn">
                   <i class="fa fa-linkedin fa-fw"></i> GitHub
                 </a>
-              </span>
+              </span> */}
             </div>
             <div className="spacing">
               <p>SCROLL ME</p>
@@ -55,7 +65,7 @@ function Landing() {
             </div>
 
             <div className="landing-catalog">
-              <div className="circle" id="catalog-circle"></div>
+              {/* <div className="circle" id="catalog-circle"></div>
               <TypeAnimation
                 sequence={[
                   "HI, IM A FRONT-END ENGINNERS! WELCOME TO MY PORTFOLIO FEEL FREE TO BROWSE. MORE UPDATE ARE COMMING SOON!",
@@ -65,7 +75,7 @@ function Landing() {
                 speed={50}
                 style={{ fontSize: "0.8em", width: "70%" }}
                 repeat={Infinity}
-              ></TypeAnimation>
+              ></TypeAnimation> */}
             </div>
           </div>
         </div>
