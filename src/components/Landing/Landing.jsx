@@ -33,7 +33,7 @@ function Landing() {
             <div className="landing-text">
               {/* <h1>{text}</h1> */}
               <span className="pill-design">
-                James Wijaya
+                Send Massages
               </span>
               <span className="pill-design">
                 <a href="#" title="LinkedIn">
