@@ -17,12 +17,12 @@ function Landing() {
             <h4>Develop  and design with purposed</h4>
             <TypeAnimation
                 sequence={[
-                  "Hi, welcome to my portfolio! Feel free to browse around and dont be shy to reach out. More update are comming soon!",
+                  "Hi, welcome to my portfolio! Feel free to browse around and dont be shy to reach out.\nMore update are comming soon!",
                   1000,
                 ]}
                 wrapper="span"
                 speed={50}
-                style={{ fontSize: "0.8em", width: "50%", fontWeight: 500 }}
+                style={{ fontSize: "0.9em", fontWeight: 400, display:"block", }}
                 repeat={Infinity}
               ></TypeAnimation>
           
