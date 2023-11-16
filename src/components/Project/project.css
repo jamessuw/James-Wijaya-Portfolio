@@ -365,6 +365,9 @@ span.heading-project-ul {
    margin-top: 25px;
 
 }
+span.project-date {
+  text-align: center;
+}
 .pill-container{
     display: inline-flex;
     justify-content: space-between;
