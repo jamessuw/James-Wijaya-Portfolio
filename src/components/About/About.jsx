@@ -9,6 +9,16 @@ import gsap from "gsap";
 import { useInView } from "react-intersection-observer";
 import styled, { keyframes } from "styled-components";
 import RevealAnimation from "./RevealAnimation";
+import html5Logo from '../../assets/html-5.png';
+import cssLogo from '../../assets/css.png'; // Adjust the path based on your project structure
+import jsLogo from '../../assets/js.png';
+import typescript from '../../assets/typescript.png';
+import reactjs from '../../assets/science.png';
+import github from '../../assets/github.png';
+import gitlab from '../../assets/gitlab.png';
+import figma from '../../assets/figma.png';
+
+
 
 const modelSrc = "https://models.readyplayer.me/64c7b1af067a35dfd8b3de7f.glb";
 
@@ -213,14 +223,15 @@ function About() {
             </RevealContainer>
 
             <div className="skills-container">
-              <span className="skills-pill">HTML5</span>{" "}
-              <span className="skills-pill">CSS</span>{" "}
-              <span className="skills-pill">Javacripts</span>{" "}
-              <span className="skills-pill">React.js</span>{" "}
-              <span className="skills-pill">Typescripts</span>{" "}
-              <span className="skills-pill">Github</span>{" "}
-              <span className="skills-pill">Tailwind</span>{" "}
-              <span className="skills-pill">Figma</span>
+            
+              <span className="skills-pill"><img src={html5Logo} alt="HTML5 Logo" /></span>{" "}
+              <span className="skills-pill">  <img src={cssLogo} alt="CSS Logo" /></span>{" "}
+              <span className="skills-pill"> <img src={jsLogo} alt="JS Logo" /></span>{" "}
+              <span className="skills-pill"> <img src={typescript} alt="Typescript Logo" /></span>{" "}
+              <span className="skills-pill"> <img src={reactjs} alt="react Logo" /></span>{" "}
+              <span className="skills-pill"> <img src={github} alt="github Logo" /></span>{" "}
+              <span className="skills-pill"> <img src={gitlab} alt="git lab Logo" /></span>{" "}
+              <span className="skills-pill"> <img src={figma} alt="figma Logo" /></span>
             </div>
           </div>
         </div>
