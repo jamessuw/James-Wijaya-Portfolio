@@ -131,3 +131,6 @@ form.--form-control--crad {
 .blob {
     position: absolute;
 }
+button.button-contactForm {
+    width: 100%;
+}
