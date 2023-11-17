@@ -98,6 +98,14 @@ input:focus {
     z-index: 100;
     transition: 0.2s;
 }
+a:hover{
+    margin-top: 10px;
+    transition: 0.8s ease;
+    background-color: #1d1d1d;
+    color: var(--color-offwhite);
+    border-radius: 10px;
+}
+
 textarea:focus{
     border: solid 6px #4949e1db;
     transition: 0.2s;

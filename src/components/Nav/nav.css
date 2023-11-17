@@ -126,6 +126,11 @@ a.Nav-Link.nav-link {
   color: var(--color-text);
   font-family: 'Rubik', sans-serif;
 }
+a.Nav-Link.nav-link:hover{
+  color: #f5f5f5;
+  font-family: 'Rubik', sans-serif;
+ 
+}
 
 ul.mr-auto.navbar-nav {
   border-bottom: none;
