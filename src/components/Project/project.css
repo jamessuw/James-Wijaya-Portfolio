@@ -366,7 +366,7 @@ span.heading-project-ul {
 
 }
 span.project-date {
-  text-align: center;
+  text-align: left;
 }
 .pill-container{
     display: inline-flex;
@@ -413,6 +413,9 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
       flex-direction: column-reverse!important;
       height: 100%;
   }
+  span.project-date {
+    text-align: center;
+  }
 
     .project-pill-container {
       display: flex;
@@ -452,12 +455,12 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
 }
 button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
   position: absolute;
-  top:70%;
+  top:30%;
   z-index: 999;
   }
   button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
     position: absolute;
-  top:70%;
+  top:30%;
   z-index: 999;
   }
   .pill-container {
