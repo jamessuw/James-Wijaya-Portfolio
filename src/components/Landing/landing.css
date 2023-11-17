@@ -310,16 +310,18 @@ canvas {
         display: flex;
         position: absolute;
 
-
-
     }
-    .tagline-landing {
-        position: absolute;
-        /* position: relative; */
-        top: 52%;
-        z-index: 999;
-        color: #323030;
-    }
+
+        .tagline-landing {
+            position: absolute;
+            /* position: relative; */
+            top: 52%;
+            z-index: 999;
+            color: #323030;
+            width: 86%;
+        
+        }
+    
 
     .container-text {
         display: flex;
