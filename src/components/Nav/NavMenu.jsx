@@ -13,6 +13,10 @@ import {
 } from "reactstrap";
 import React, { useState, useEffect } from "react";
 // sample with useState
+import { motion, AnimatePresence } from "framer-motion";
+
+
+
 
 
 
@@ -28,7 +32,9 @@ const NavMenu = (props) => {
   return (
 
  <div>
-     <RevealAnimation>   
+     <RevealAnimation>  
+     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+
       <Navbar className="container" dark expand="md">
 
         
@@ -36,6 +42,8 @@ const NavMenu = (props) => {
                
   <div className="circle-nav"></div>
           <span className="tag-nav">
+
+
             <span class="heading block-reveal">
               <span className="block-reveal">
                 <h6>
@@ -51,7 +59,8 @@ const NavMenu = (props) => {
       
 
        <NavbarToggler onClick={toggle} />
-        <Collapse className="justify-content-end" isOpen={isOpen} navbar>
+       <Collapse className="justify-content-end nav-collapse" isOpen={isOpen} navbar>
+
        <Nav className="mr-auto" navbar>
             <NavItem>
               <NavLink className="Nav-Link" href="#About-section">
@@ -64,7 +73,7 @@ const NavMenu = (props) => {
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className="Nav-Link" href="#contact-section">
+              <NavLink className="Nav-Link" href="#lab-section">
                 Lab
               </NavLink>
             </NavItem>
@@ -76,6 +85,7 @@ const NavMenu = (props) => {
           </Nav>
         </Collapse>
       </Navbar>
+      </motion.div>
     </RevealAnimation>  
     </div>
   );

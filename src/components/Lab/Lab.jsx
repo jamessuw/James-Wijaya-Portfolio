@@ -10,7 +10,7 @@ import RevealAnimation from "../Animation/RevealAnimation";
 
 function Lab() {
   return (
-    <section className="lab-section">
+    <section className="lab-section" id="lab-section">
       <div className="container">
         <div className="container-1">
           <div className="comming-soon-container">

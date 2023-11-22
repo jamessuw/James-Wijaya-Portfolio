@@ -125,10 +125,12 @@ a#Nav-container :hover {
 a.Nav-Link.nav-link {
   color: var(--color-text);
   font-family: 'Rubik', sans-serif;
+  transition: all 1s ease;
 }
 a.Nav-Link.nav-link:hover{
   color: #f5f5f5;
   font-family: 'Rubik', sans-serif;
+  transition: all 1s ease;
  
 }
 

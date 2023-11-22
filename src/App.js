@@ -83,6 +83,53 @@ useEffect(() => {
   }, [loading]);
 
 
+  useEffect(() => {
+    console.clear();
+
+    let sections = gsap.utils.toArray("section"),
+      currentSection = sections[0],
+      navlinks = gsap.utils.toArray("nav a");
+
+    gsap.set("body", { height: sections.length * 100 + "%" });
+
+    sections.forEach((section, i) => {
+      gsap.to(section, {
+        scrollTrigger: {
+          trigger: section,
+          start: "top center",
+          end: "bottom center",
+          toggleClass: "active",
+          onToggle: () => setSection(section),
+        },
+      });
+    });
+
+    function setSection(newSection) {
+      if (newSection !== currentSection) {
+        var tl = gsap.timeline({
+          defaults: {
+            duration: 0.5,
+            overwrite: "auto",
+          },
+        });
+        tl.to(newSection, { scale: 1, autoAlpha: 1 })
+          .to(currentSection, { scale: 1.2, autoAlpha: 0 }, "<")
+          .from(newSection.querySelector("h1"), { autoAlpha: 0, y: 50 }, "<")
+          .from(newSection.querySelector("p"), { autoAlpha: 0, y: 20 }, ">");
+
+        currentSection = newSection;
+      }
+    }
+
+    gsap.utils.toArray(navlinks).forEach(function (a, i) {
+      a.addEventListener("click", function (e) {
+        e.preventDefault();
+        gsap.to(window, { duration: 0.1, scrollTo: i * window.innerHeight, overwrite: true });
+      });
+    });
+  }, []);
+
+
 
   return (
     <div className={`App ${loading ? 'loading' : ''}`}>

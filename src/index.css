@@ -100,10 +100,13 @@ input:focus {
 }
 a:hover{
     margin-top: 10px;
-    transition: 0.8s ease;
+    transition: 0.8s ease-in-out;
     background-color: #1d1d1d;
     color: var(--color-offwhite);
     border-radius: 10px;
+    transition: all 1s ease;
+    
+    
 }
 
 textarea:focus{
