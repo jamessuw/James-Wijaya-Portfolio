@@ -4,6 +4,7 @@ uniform float u_time;
 
 varying vec2 vUv;
 varying float vDisplacement;
+varying float vShadow;
 
 // Classic Perlin 3D Noise 
 // by Stefan Gustavson
@@ -90,6 +91,9 @@ float cnoise(vec3 P) {
 
 
 // End of Perlin Noise Code
+
+
+
 
 
 //Dynamic noise code 

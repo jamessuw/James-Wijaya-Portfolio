@@ -6,6 +6,7 @@ import { TypeAnimation } from "react-type-animation";
 import RevealAnimation from "../Animation/RevealAnimation";
 
 
+
 function Landing() {
   return (
     <section id="sct-landing-mobile" className="Landing-section">
@@ -35,7 +36,7 @@ function Landing() {
         
               >
                 <Blob />
-              </Canvas>
+              </Canvas >
             </div>
           </div></RevealAnimation>
 
