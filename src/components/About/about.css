@@ -108,6 +108,8 @@ section#About-section {
             /* margin: auto 0; */
             margin: 50px 0 45px 0;
             /* justify-content: center; */
+                padding-bottom: 15px;
+            
         }
 
         .skills-pill {
