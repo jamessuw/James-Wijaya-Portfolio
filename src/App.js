@@ -132,6 +132,7 @@ function App() {
       <Loading active={loading} percentage={percentage} />
       {!loading && (
         <>
+        <div id="top"></div>
           <NavMenu />
           <div className="panel">
             <Landing />

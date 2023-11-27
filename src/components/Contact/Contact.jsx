@@ -7,6 +7,11 @@ import { OrbitControls } from "@react-three/drei";
 // import Model from "../Lab/Model"; /* highlight-line */
 import gsap from "gsap";
 import RevealAnimation from "../Animation/RevealAnimation";
+import { Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink } from "reactstrap";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+
+
+
 
 function Contact() {
   const modelSrc = "https://models.readyplayer.me/64c7b1af067a35dfd8b3de7f.glb";
@@ -37,6 +42,12 @@ function Contact() {
     e.target.reset();
   };
 
+    
+
+
+
+
+
   return (
     <section id="contact-section">
       <span className="heading-project">
@@ -53,7 +64,7 @@ function Contact() {
       <div className="container">
         <div className="container-1">
           <div className="container-abstracts">
-            <div class="blob"></div>
+           
             <RevealAnimation>
               <p className="tag-contact reveal">
                 IM CURRENTLY OPEN FOR PROJECT <br></br>
@@ -106,9 +117,22 @@ function Contact() {
                 Send massages
               </button>
             </form>
+           <ScrollLink to="top" smooth={true} duration={500}>
+        <button className="scroll-top-btn">
+          Scroll to Top
+        </button>
+      </ScrollLink>
+          
           </div>
         </div>
+
+ 
+
       </div>
+
+    
+
+
     </section>
   );
 }
