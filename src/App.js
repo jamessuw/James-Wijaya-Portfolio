@@ -1,25 +1,21 @@
-import './App.css';
+import "./App.css";
 import NavMenu from "./components/Nav/NavMenu";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import ParticleComp from './components/Particle/ParticleComp';
-import Landing from './components/Landing/Landing';
-import About from './components/About/About';
-import Project from './components/Project/Project';
-import Contact from './components/Contact/Contact';
-import Lab from './components/Lab/Lab';
+import Landing from "./components/Landing/Landing";
+import About from "./components/About/About";
+import Project from "./components/Project/Project";
+import Contact from "./components/Contact/Contact";
+import Lab from "./components/Lab/Lab";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useState,CSSProperties } from 'react';
+import { useEffect, useState, CSSProperties } from "react";
 import PacmanLoader from "react-spinners/PacmanLoader";
-import Loading from './components/Loading/Loading';
-
-
-
+import Loading from "./components/Loading/Loading";
 
 function App() {
- 
   const [loading, setLoading] = useState(true);
-  
+
   useEffect(() => {
     // Simulate an API call or any async operation
     setTimeout(() => {
@@ -31,7 +27,7 @@ function App() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setPercentage(prevPercentage => {
+      setPercentage((prevPercentage) => {
         // Increment the percentage by a certain value (for example, 1) until it reaches 100
         return prevPercentage < 100 ? prevPercentage + 1 : prevPercentage;
       });
@@ -41,11 +37,10 @@ function App() {
     return () => clearInterval(interval);
   }, []); // Empty dependency array ensures the effect runs once after the initial render
 
-
-useEffect(() => {
+  useEffect(() => {
     if (!loading) {
       const mediaQueryHandler = () => {
-        const sections = gsap.utils.toArray('.panel');
+        const sections = gsap.utils.toArray(".panel");
         ScrollTrigger.config({
           ignoreMobileResize: true,
         });
@@ -57,14 +52,14 @@ useEffect(() => {
               scrub: 2,
               pin: true,
               pinSpacing: false,
-              start: 'top top',
+              start: "top top",
               end: () => `+=${panelHeight + window.innerHeight}`, // Adjust the end point
-              onUpdate: self => console.log('progress:', self.progress),
+              onUpdate: (self) => console.log("progress:", self.progress),
             },
           });
         });
       };
-      const mm = window.matchMedia('(min-width: 800px)');
+      const mm = window.matchMedia("(min-width: 800px)");
       if (mm.matches) {
         mediaQueryHandler();
       }
@@ -81,7 +76,6 @@ useEffect(() => {
       };
     }
   }, [loading]);
-
 
   useEffect(() => {
     console.clear();
@@ -124,38 +118,40 @@ useEffect(() => {
     gsap.utils.toArray(navlinks).forEach(function (a, i) {
       a.addEventListener("click", function (e) {
         e.preventDefault();
-        gsap.to(window, { duration: 0.1, scrollTo: i * window.innerHeight, overwrite: true });
+        gsap.to(window, {
+          duration: 0.1,
+          scrollTo: i * window.innerHeight,
+          overwrite: true,
+        });
       });
     });
   }, []);
 
-
-
   return (
-    <div className={`App ${loading ? 'loading' : ''}`}>
-    <Loading active={loading} percentage={percentage} />
-    {!loading && (
-      <>
-        <NavMenu />
-        <div className="panel">
-          <Landing />
-        </div>
-        <section className="panel">
-          <About />
-        </section>
-        <section className='panel'>
-          <Project />
-        </section>
-        <section className="panel">
-          <Lab />
-        </section>
-        <section className="panel">
-          <Contact />
-        </section>
-      </>
-    )}
-  </div>
-);
+    <div className={`App ${loading ? "loading" : ""}`}>
+      <Loading active={loading} percentage={percentage} />
+      {!loading && (
+        <>
+          <NavMenu />
+          <div className="panel">
+            <Landing />
+          </div>
+          <section className="panel">
+            <About />
+          </section>
+          <section className="panel">
+            <Project />
+          </section>
+          <section className="panel">
+            <Lab />
+          </section>
+          <section className="panel">
+            <Contact />
+          </section>
+        </>
+      )}
+    </div>
+  );
 }
 
 export default App;

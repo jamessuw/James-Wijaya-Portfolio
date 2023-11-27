@@ -66,6 +66,13 @@ section{
       scroll-snap-type: x proximity;
 
 }
+cursor{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: tomato;
+    
+}
 
 section#sct-landing-mobile {
 

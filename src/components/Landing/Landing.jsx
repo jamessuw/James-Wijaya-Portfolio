@@ -8,6 +8,8 @@ import RevealAnimation from "../Animation/RevealAnimation";
 
 
 function Landing() {
+
+
   return (
     <section id="sct-landing-mobile" className="Landing-section">
       <div className="container" id="landing-container">
@@ -28,8 +30,10 @@ function Landing() {
               ></TypeAnimation>
           
           
-          </div>
-            <RevealAnimation><div className="binary-cube">
+          </div>   
+          
+            <RevealAnimation>
+              <div className="binary-cube">
             <div className="blob-container">
             
               <Canvas  camera={{ position: [0.0, 0.0, 8.0] }} shadow
@@ -37,8 +41,12 @@ function Landing() {
               >
                 <Blob />
               </Canvas >
+           <span className="hover-text">HOVER ME</span>
             </div>
-          </div></RevealAnimation>
+          </div>
+          
+          
+          </RevealAnimation>
 
           <div className="container-text">
             <div className="landing-text">
@@ -56,15 +64,7 @@ function Landing() {
                 </a>
               </span> */}
             </div>
-            <div className="spacing">
-              <p>SCROLL ME</p>
-              <div className="mouse-container">
-                <div class="mouse">
-                  <span class="scroller"></span>
-                </div>
-              </div>
-            </div>
-
+      
             <div className="landing-catalog">
               {/* <div className="circle" id="catalog-circle"></div>
               <TypeAnimation

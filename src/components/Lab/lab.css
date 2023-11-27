@@ -1,42 +1,46 @@
-.comming-soon-container{
+.comming-soon-container {
     height: 100vh;
     text-align: center;
-    padding:350px;
-   
+    padding: 350px;
+
 
 }
-.comming-soon-container h1{
-    
-font-size: 5rem;
+
+.comming-soon-container h1 {
+
+    font-size: 5rem;
 }
 
-.lab-section{
-    background-color:#e0e0e0;
-        position: relative;
-        padding: 35px;
-        height: 100vh;
-    }
+.lab-section {
 
-  .lab-section h2{
+    background-color: #f8f2f2;
+    position: relative;
+    padding: 35px;
+    height: 100vh;
+}
+
+.lab-section h2 {
     text-align: center;
 }
-.lab-section h1{
+
+.lab-section h1 {
     text-align: center;
 }
-.lab-section{
-  
-        width: 100%;
-        display: block;
-    
+
+.lab-section {
+
+    width: 100%;
+    display: block;
+
 }
 
 
 @media screen and (max-width: 768px) {
 
 
-.comming-soon-container {
-    height: 100vh;
-    text-align: center;
-    padding: 0px
-}
+    .comming-soon-container {
+        height: 100vh;
+        text-align: center;
+        padding: 0px
+    }
 }

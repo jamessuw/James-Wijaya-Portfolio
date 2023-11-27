@@ -88,7 +88,10 @@ function Blob() {
         <planeGeometry args={[2, 2]} />
         <meshBasicMaterial transparent opacity={0} />
       </mesh>
+  
     </group>
+
+
   );
 }
 
