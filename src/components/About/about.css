@@ -124,6 +124,9 @@ section#About-section {
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
         pointer-events: auto;
     }
+    .skill-pill img{
+        height: 40px;
+    }
 
     section#About-section {
         background-color: #eeebeb;

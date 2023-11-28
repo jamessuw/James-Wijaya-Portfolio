@@ -134,6 +134,12 @@ canvas {
 
 }
 
+.hover-text {
+
+display: none;
+
+}
+
 #landing-page {
     border-radius: 70px;
     padding: 10px;
