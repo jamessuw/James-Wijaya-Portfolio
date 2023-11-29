@@ -92,6 +92,10 @@ font-weight: 600;
   70% {opacity: 0.5;}
   to { opacity: 1; }
 }
+.hidden {
+    display: none;
+  }
+
 
 canvas {
     height: 100%;
@@ -134,11 +138,7 @@ canvas {
 
 }
 
-.hover-text {
 
-display: none;
-
-}
 
 #landing-page {
     border-radius: 70px;
@@ -379,4 +379,9 @@ display: none;
         width: 290px;
     }
  
+    .hover-text {
+
+        display: none;
+        
+        }
 }

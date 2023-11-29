@@ -8,6 +8,7 @@ import RevealAnimation from "../Animation/RevealAnimation";
 
 
 function Landing() {
+  const [isHovered, setIsHovered] = useState(false);
 
 
   return (
@@ -41,7 +42,13 @@ function Landing() {
               >
                 <Blob />
               </Canvas >
-           <span className="hover-text">HOVER ME</span>
+              <span
+      className={`hover-text ${isHovered ? 'hidden' : ''}`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      HOVER ME
+    </span>
             </div>
           </div>
           
