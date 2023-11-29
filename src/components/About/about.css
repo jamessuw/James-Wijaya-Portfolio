@@ -90,6 +90,14 @@ section#About-section {
     .container-1 {
         padding: 15px !important;
     }
+    #avatar-container{
+            border-radius: 31px;
+            background-color: #f1eaeaf1;
+            margin-bottom: 10px;
+            margin-top: 30px;
+        
+
+    }
 
     .text-container {
         display: flex;

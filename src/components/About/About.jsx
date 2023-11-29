@@ -135,7 +135,7 @@ function About() {
   return (
     <section id="About-section">
       <div className="container">
-        <div className="container-1">
+        <div className="container-1" id="avatar-container">
           <div className="avatar-3D">
             <div className="icon-container-profile">
               <div className="icon-profile">
