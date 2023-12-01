@@ -47,7 +47,7 @@ function Landing() {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      HOVER ME
+      HOVER Me
     </span>
             </div>
           </div>
