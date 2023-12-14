@@ -97,36 +97,34 @@ const projects = [
 
   return (
     <section id="project-section-container">
-      <div className="container-1">
-      <div data-speed="0.5" className="box1">
+      
+        <div data-speed="0.5" className="box1">
         <h1>PROJECT</h1>
       </div>
       <div data-speed="0.5" className="box2">
         <h2>ARC`HIVE</h2>
       </div>
-      <Carousel responsive={responsive} containerClass="carousel-container" infinite={true}>
-  {projects.map((project, index) => (
-    <div key={index} className="project-list-container">
-      {/* Wrap each project inside a separate div */}
-      <div className="img-project-conatiner">
-        <img className="img-project" src={project.imgSrc} alt={`Project ${index}`} />
-      </div> 
-      <span className="heading-project-ul"><h3>{project.projectName}</h3></span>
-              <span className="project-date"><h4>{project.date}</h4></span>
-      <span className="line"></span>
-      <div className="desc-container">
-        <div className="pill-container">
-       <div className="pill">{project.service}</div>
-       <div className="pill">{project.location}</div>
-       <div className="pill">{project.tech}</div>
-       
-       </div>
+    <span className="text-project"><p>This project section showcases my dedication to creating a solution<br></br> that simplifies the complexities of projects. The following project that ive <br></br>showcases are selected</p></span>
+      <div className="container-pro">
 
-        <p>{project.description}</p>
-      </div>
-    </div>
-  ))}
-</Carousel></div>
+<div className="container-1"> 
+<div className="list-container">
+  <ul>
+    <li><h2>MEETBOWL</h2></li>
+    <li><h2>ETOME</h2></li>
+  </ul>
+</div>
+
+</div>
+
+<div className="container-1">
+  <div className="image-container">
+<img></img>
+</div>
+</div>
+
+
+</div>
     </section>
   );
 }
