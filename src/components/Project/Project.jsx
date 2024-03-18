@@ -129,10 +129,11 @@ function Project() {
             customTransition="transform 300ms ease-in-out"
             transitionDuration={300}
             containerClass="carousel-container"
-            removeArrowOnDeviceType={['tablet', 'mobile']}
+           
             deviceType="desktop"
             dotListClass="custom-dot-list-style"
             itemClass="carousel-item-padding-40-px"
+            
           >
             {cardsData.map((card) => (
               <Card
