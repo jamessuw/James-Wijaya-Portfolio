@@ -1,7 +1,7 @@
 import "./nav.css";
 import RevealAnimation from "../Animation/RevealAnimation";
 
-
+import logo from '../../assets/logo-port.png';
 import {
   Collapse,
   Navbar,
@@ -40,7 +40,7 @@ const NavMenu = (props) => {
         
         <div className="container" id="Nav-container">
                
-  <div className="circle-nav"></div>
+  <div className="circle-nav"> <img src={logo}></img></div>
           <span className="tag-nav">
 
 

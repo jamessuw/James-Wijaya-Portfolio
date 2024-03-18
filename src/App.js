@@ -143,9 +143,9 @@ function App() {
           <section className="panel">
             <Project />
           </section>
-          <section className="panel">
+         {/* <section className="panel">
             <Lab />
-          </section>
+          </section> */}
           <section className="panel">
             <Contact />
           </section>

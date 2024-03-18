@@ -113,9 +113,14 @@ section#About-section {
     }
 
     .skills-container {
-        width: 100%;
+        width: 110%;
         margin: 50px 0 45px 0;
         padding-bottom: 15px;
+
+
+    }
+    .skills-container {
+        padding-bottom: 10px!important;
 
     }
 

@@ -98,172 +98,7 @@ font-size: 3rem;
     pointer-events: auto;
 
   }
-  .blob-container{
-    z-index: 1;
-    position: absolute;
-    height: 100%;
-}
-.image-container{
-    z-index: 100;
-    display: block;
-    position: absolute;
-
-}
-#project-section{
-  width: var(--container-width-sm);
-  display: flex!important;
-  flex-direction: column-reverse!important;
-  height: 100%;
-}
-#project-list{
-    display: flex;
-    height: auto;
-    justify-content: space-between;
-    width: 50vw;
-}
-/* 
-button#folder-button {
-    background: none;
-    box-shadow: none;
-    height: 100px;
-    width: 100px;
-    padding: 0;
-}
-
-.project-head{
-    width: 100%;
-    display: block;
-    padding-top: 150px;
-    padding-bottom: 30px;
-}
-
-p {
-  font-weight: 400;
-  color: #1d1d1d;
-  padding-top: 10px;
-}
-
-.project_name {
-  text-align: center;
-}
-
-.folder {
-  transition: all 0.2s ease-in;
-}
-.folder__back {
-  position: relative;
-  width: 100px;
-  height: 80px;
-  background: #4786ff;
-  border-radius: 0px 5px 5px 5px;
-}
-.folder__back::after {
-  position: absolute;
-  bottom: 98%;
-  left: 0;
-  content: "";
-  width: 30px;
-  height: 10px;
-  background: #4786ff;
-  border-radius: 5px 5px 0 0;
-}
-.folder__back .paper {
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translate(-50%, 10%);
-  width: 70%;
-  height: 80%;
-  background: #e6e6e6;
-  border-radius: 5px;
-  transition: all 0.3s ease-in-out;
-}
-.folder__back .paper:nth-child(2) {
-  background: #f2f2f2;
-  width: 80%;
-  height: 70%;
-}
-.folder__back .paper:nth-child(3) {
-  background: white;
-  width: 90%;
-  height: 60%;
-}
-.folder__back .folder__front {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #70a1ff;
-  border-radius: 5px;
-  transform-origin: bottom;
-  transition: all 0.3s ease-in-out;
-}
-.folder:hover {
-  transform: translateY(-8px);
-}
-.folder:hover .paper {
-  transform: translate(-50%, 0%);
-}
-.folder:hover .folder__front {
-  transform: skew(15deg) scaleY(0.6);
-}
-.folder:hover .right {
-  transform: skew(-15deg) scaleY(0.6);
-}
-
-.window-pop{
-    height: 500px;
-    width: 500px;
-    display: block;
-    background-color: #ffffff;
-    border-radius: 18px;
-    padding: 20px;
-} */
-.project-head h1{
-font-size: 6.5rem;
-
-}
-#project-container{
-    margin: 0;
-}
-
-.list-project {
-    display: flex;
-    flex-direction: column;
-    border-bottom: solid 0.5px;
-    padding-bottom: 1.25vw;
-    padding-top: 1.25vw;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    height: 100%;
-    
-
-}
-
-.list-project .list h2{
-    margin-bottom: none!important;
-}
-#project-overscroll{
-
-        background-color: #f5efef;
-        border-radius: 25px;
-        z-index: 100;
-        overflow-y: auto;
-        height: 800px;
-     
-    
-}
-
-  .img-project {
-    z-index: 100;
-    width: 600px;
-    border-radius: 17px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; 
-}
-.img-project {
-z-index: 100;
-width:390px;
-}
+  
 #project-container{
     display: flex;
     flex-direction: row!important;
@@ -335,22 +170,7 @@ body:not(.mobile) .list-text:hover + .img-project img{
 .react-multi-carousel-list.carousel-container ul{
   height: 100vh;
   margin-top: 40px;
-  
-
-}
-.line{
-  display: block;
-  width: 300px;
-  border: solid 0.5px rgb(255, 253, 253);
-  margin: 30px 0 20px 0;
-  height: 0.5px;
-}
  
-.project-list-container{
-  margin: 60px;
-    display: block;
-
-}
 
 /* .project-list-container {
   margin: 19px;
@@ -360,55 +180,13 @@ body:not(.mobile) .list-text:hover + .img-project img{
   border-radius: 20px;
 } */
 
-span.heading-project-ul {
-  text-align: left;
-   display: block;
-   margin-top: 25px;
+}
 
-}
-span.project-date {
-  text-align: left;
-}
-.pill-container{
-    display: inline-flex;
-    justify-content: space-between;
-    margin: 10px;
-    width: 75%;
-    object-position: left;
-    margin-left: 0px;
 
-}
-.pill{
-  display: block;
-  border: solid 0.5px rgb(255, 255, 255);
-  border-radius: 10px;
-  padding: 10px;
-}
-.project-date h4{
-  font-size: 1.3rem;
-}
-/* slide */
-button .react-multi-carousel-list.carousel-container{
-position: relative;
-top: 50px;
-}
-button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
-  position: absolute;
-  top: 35%;
-  right:0%;
-  width: 5%;
-}
-  button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
-    position: absolute;
-  top:35%;
-  left: 0%;
-  width: 5%;
-  }
   
 
     /*===== new style ====*/
 .container-pro{
-  height: 100vh;
   display: flex;
 }
 .image-container{
@@ -423,6 +201,37 @@ button.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
   margin-left: 32px;
 }
 
+
+
+/* card*/
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: 100%;
+}
+
+.card img {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 10px 0;
+}
+li.react-multi-carousel-item.react-multi-carousel-item--active.carousel-item-padding-40-px {
+padding: 15px;
+}
 
 
   @media screen and (max-width: 768px) {
