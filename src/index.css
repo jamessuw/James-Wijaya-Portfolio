@@ -85,7 +85,7 @@ height: 100%;
 overflow-y: hidden;
 display: block;
 position: relative;
-pointer-events: none;
+
 transform: none!important;
 clip-path: none !important;
 box-shadow:none !important;

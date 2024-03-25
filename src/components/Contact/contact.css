@@ -93,6 +93,7 @@ form.--form-control--crad {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 65vh;
 }
 .blob {
     position: absolute;
@@ -101,5 +102,5 @@ button.button-contactForm {
     width: 100%;
 }
 .scroll-top-btn{
-    width: fit-content;
+    width: 100%;
 }
