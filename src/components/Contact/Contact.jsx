@@ -117,7 +117,7 @@ function Contact() {
                 Send massages
               </button>
             </form>
-           <ScrollLink to="top" smooth={true} duration={500}>
+           <ScrollLink to="top" smooth={true} >
         <button className="scroll-top-btn">
           Scroll to Top
         </button>
