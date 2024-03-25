@@ -125,6 +125,19 @@ canvas {
 
 
 }
+.hover-text {
+    transition: visibility 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .hover-text.hidden {
+    visibility: hidden!important;
+  }
+
+  span.hover-text {
+   visibility: hidden;
+}
+  
 
 @media screen and (min-width: 1880px) {
 

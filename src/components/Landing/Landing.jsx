@@ -43,12 +43,12 @@ function Landing() {
                 <Blob />
               </Canvas >
               <span
-      className={`hover-text ${isHovered ? 'hidden' : ''}`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      HOVER ME
-    </span>
+        className={`hover-text ${isHovered ? 'hidden' : ''}`}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        HOVER ME
+      </span>
             </div>
           </div>
           

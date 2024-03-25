@@ -58,31 +58,31 @@ function Project() {
   const cardsData = [
     {
       id: 1,
-      title: 'Card 1',
+      title: 'Etome',
       description: 'This is the description for Card 1.',
       image: etome,
     },
     {
       id: 2,
-      title: 'Card 2',
+      title: 'Unleash Health',
       description: 'This is the description for Card 2.',
       image: unleashhealth,
     },
     {
       id: 3,
-      title: 'Card 3',
+      title: 'Clear Dynamics',
       description: 'This is the description for Card 3.',
       image: ClearDynamics,
     },
     {
       id: 4,
-      title: 'Card 4',
+      title: 'Meetbowl',
       description: 'This is the description for Card 3.',
       image: meetbowl,
     },
     {
       id: 5,
-      title: 'Card 5',
+      title: 'PT.KumalaJingga',
       description: 'This is the description for Card 3.',
       image: kumala,
     },
