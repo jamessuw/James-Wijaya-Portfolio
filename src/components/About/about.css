@@ -136,9 +136,10 @@ section#About-section {
         cursor: pointer;
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
         pointer-events: auto;
+        height: 70px;
     }
     .skill-pill img{
-        height: 40px;
+        height: 70px;
     }
 
     section#About-section {
