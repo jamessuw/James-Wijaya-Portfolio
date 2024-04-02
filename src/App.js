@@ -41,15 +41,15 @@ function App() {
     if (!loading) {
       const mediaQueryHandler = () => {
         const sections = gsap.utils.toArray(".panel");
-        ScrollTrigger.config({
-          ignoreMobileResize: true,
-        });
+        // ScrollTrigger.config({
+        //   ignoreMobileResize: true,
+        // });
         sections.forEach((panel, i) => {
           const panelHeight = panel.clientHeight;
           gsap.to(panel, {
             scrollTrigger: {
               trigger: panel,
-              scrub: 2,
+              scrub: true,
               pin: true,
               pinSpacing: false,
               start: "top top",
