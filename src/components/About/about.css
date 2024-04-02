@@ -80,9 +80,7 @@ section#About-section {
 
 @media screen and (max-width: 768px) {
 
-.img{
-    object-fit: scale-down;
-}
+
 
     .avatar-3D {
 
@@ -145,6 +143,7 @@ section#About-section {
     }
     .skill-pill img{
         height: 70px;
+        object-fit:fill ;
     }
 
     section#About-section {
