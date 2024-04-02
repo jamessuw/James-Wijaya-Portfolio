@@ -134,7 +134,7 @@ function App() {
         <>
         <div id="top"></div>
           <NavMenu />
-          <div className="panel">
+          <div className="panel" id="panel-1">
             <Landing />
           </div>
           <section className="panel">
