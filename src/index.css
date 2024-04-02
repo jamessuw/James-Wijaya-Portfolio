@@ -73,6 +73,9 @@ cursor{
     background-color: tomato;
     
 }
+section{
+    pointer-events: all;
+}
 
 section#sct-landing-mobile {
 

@@ -79,6 +79,11 @@ section#About-section {
 }
 
 @media screen and (max-width: 768px) {
+
+.img{
+    object-fit: scale-down;
+}
+
     .avatar-3D {
 
         display: block;
