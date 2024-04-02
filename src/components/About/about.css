@@ -46,7 +46,7 @@ section#About-section {
 
 .skills-pill {
     /* border: solid 0.5px; */
-    height: 70px;
+    height: 9vh;
     padding: 10px;
     border-radius: 18px;
     margin-right: 3px;
@@ -139,7 +139,7 @@ section#About-section {
         cursor: pointer;
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
         pointer-events: auto;
-        height: 70px;
+        
     }
     .skill-pill img{
         height: 70px;
