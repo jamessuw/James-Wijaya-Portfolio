@@ -224,14 +224,14 @@ function About() {
 
             <div className="skills-container">
             
-              <span className="skills-pill"><img src={html5Logo} alt="HTML5 Logo" /></span>{" "}
-              <span className="skills-pill">  <img src={cssLogo} alt="CSS Logo" /></span>{" "}
-              <span className="skills-pill"> <img src={jsLogo} alt="JS Logo" /></span>{" "}
-              <span className="skills-pill"> <img src={typescript} alt="Typescript Logo" /></span>{" "}
-              <span className="skills-pill"> <img src={reactjs} alt="react Logo" /></span>{" "}
-              <span className="skills-pill"> <img src={github} alt="github Logo" /></span>{" "}
-              <span className="skills-pill"> <img src={gitlab} alt="git lab Logo" /></span>{" "}
-              <span className="skills-pill"> <img src={figma} alt="figma Logo" /></span>
+              <span className="skills-pill"><img className="skill-img" src={html5Logo} alt="HTML5 Logo" /></span>{" "}
+              <span className="skills-pill"> <img className="skill-img"src={cssLogo} alt="CSS Logo" /></span>{" "}
+              <span className="skills-pill"> <img className="skill-img"src={jsLogo} alt="JS Logo" /></span>{" "}
+              <span className="skills-pill"> <img className="skill-img"src={typescript} alt="Typescript Logo" /></span>{" "}
+              <span className="skills-pill"> <img className="skill-img"src={reactjs} alt="react Logo" /></span>{" "}
+              <span className="skills-pill"> <img className="skill-img"src={github} alt="github Logo" /></span>{" "}
+              <span className="skills-pill"> <img className="skill-img"src={gitlab} alt="git lab Logo" /></span>{" "}
+              <span className="skills-pill"> <img className="skill-img"src={figma} alt="figma Logo" /></span>
             </div>
           </div>
         </div>

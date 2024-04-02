@@ -143,6 +143,7 @@ canvas {
 
     .binary-cube {
         height: 700px;
+        touch-action: auto;
 
     }
 
