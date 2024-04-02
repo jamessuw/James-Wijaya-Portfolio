@@ -283,7 +283,7 @@ section >h2 {
 
 
 .reveal {
-    margin: 0 20px;
+    /* margin: 0 20px; */
     overflow: hidden;
 /* Elements are initially hidden */
   }
