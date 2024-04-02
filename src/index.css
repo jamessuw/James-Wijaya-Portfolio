@@ -34,7 +34,7 @@
     --hover:#ffa260;
 }
 html{
-    scroll-behavior: smooth!important;
+    /* scroll-behavior: smooth!important; */
     user-select: none;
 }
 a{
