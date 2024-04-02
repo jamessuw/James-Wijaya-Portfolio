@@ -1,34 +1,54 @@
-import React, { useRef, useMemo } from "react";
-import { useFrame } from "@react-three/fiber";
-import { MathUtils } from "three";
+import React, { useRef, useMemo, useState } from "react";
+import { useFrame, useThree } from "@react-three/fiber";
+import { MathUtils, Vector2 } from "three";
 import { DirectionalLight } from "three";
-import * as THREE from 'three'; // Import the THREE library
 import vertexShader from "./vertexShader";
 import fragmentShader from "./fragmentShader";
 
+// Import THREE namespace
+import * as THREE from 'three';
+
 function Blob() {
   const mesh = useRef();
+  const { camera } = useThree();
+  const [dragging, setDragging] = useState(false);
+  const [prevPosition, setPrevPosition] = useState(new Vector2());
+
+  const handlePointerDown = (event) => {
+    event.stopPropagation();
+    setDragging(true);
+    setPrevPosition(new Vector2(event.clientX, event.clientY));
+  };
+
+  const handlePointerMove = (event) => {
+    event.stopPropagation();
+    if (dragging) {
+      const delta = new Vector2(
+        event.clientX - prevPosition.x,
+        event.clientY - prevPosition.y
+      );
+      setPrevPosition(new Vector2(event.clientX, event.clientY));
+      camera.position.x -= delta.x * 0.01;
+      camera.position.y += delta.y * 0.01;
+      camera.lookAt(0, 0, 0);
+    }
+  };
+
+  const handlePointerUp = () => {
+    setDragging(false);
+  };
+
   const hover = useRef(false);
   const shouldCastShadow = useMemo(() => Math.random() < 8.5, []);
   const shouldReceiveShadow = useMemo(() => Math.random() < 8.5, []);
-
-  // Set up your scene, camera, and renderer
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
-  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 
   // Set up lights
   const lightTop = new DirectionalLight(0xFFFFFF, 0.5);
   lightTop.position.set(0, 200, 200);
   lightTop.castShadow = true;
-  scene.add(lightTop);
-
   const lightBottom = new DirectionalLight(0xFFFFFF, 0.15);
   lightBottom.position.set(0, -200, 400);
   lightBottom.castShadow = true;
-  scene.add(lightBottom);
-
-  // ...
 
   const uniforms = useMemo(() => {
     return {
@@ -65,9 +85,12 @@ function Blob() {
         position={[0, 0, 0]}
         onPointerOver={() => (hover.current = true)}
         onPointerOut={() => (hover.current = false)}
+        onPointerDown={handlePointerDown}
+        onPointerMove={handlePointerMove}
+        onPointerUp={handlePointerUp}
         castShadow={shouldCastShadow}
         receiveShadow={shouldReceiveShadow}
-        style={{ pointerEvents: "none" }}
+        style={{ pointerEvents: "auto" }}
       >
         <icosahedronGeometry args={[2, 20]} />
         <meshPhongMaterial />
@@ -77,28 +100,7 @@ function Blob() {
           uniforms={uniforms}
         />
       </mesh>
-      <mesh
-        position={[0, 0, -5]}
-        onPointerOver={(event) => {
-          event.stopPropagation();
-          hover.current = true;
-        }}
-        onPointerOut={(event) => {
-          event.stopPropagation();
-          hover.current = false;
-        }}
-        scale={[2.2, 2.2, 2.2]}
-      >
-        <planeGeometry args={[2, 2]} />
-        <meshBasicMaterial transparent opacity={0} />
-      </mesh>
-  
-
-
-  
     </group>
-
-
   );
 }
 
