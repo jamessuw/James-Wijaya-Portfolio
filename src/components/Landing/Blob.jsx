@@ -34,6 +34,7 @@ function Blob() {
     return {
       u_time: { value: 0 },
       u_intensity: { value: 0.3 },
+      u_color: { value: new THREE.Color(0xff0000) }, // Add a color uniform
     };
   }, []);
 
@@ -50,6 +51,9 @@ function Blob() {
         hover.current ? 1 : 0.15,
         0.02
       );
+
+      // Change color when hovered over
+      mesh.current.material.uniforms.u_color.value = hover.current ? new THREE.Color(0x00ff00) : new THREE.Color(0xff0000);
     }
   });
 
@@ -88,6 +92,9 @@ function Blob() {
         <planeGeometry args={[2, 2]} />
         <meshBasicMaterial transparent opacity={0} />
       </mesh>
+  
+
+
   
     </group>
 
