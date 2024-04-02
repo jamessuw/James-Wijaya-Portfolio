@@ -117,11 +117,11 @@ function Contact() {
                 Send massages
               </button>
             </form>
-           <ScrollLink to="top" smooth={true} spy={true} >
+           {/* <ScrollLink to="top" smooth={true} spy={true} >
         <button className="scroll-top-btn">
           Scroll to Top
         </button>
-      </ScrollLink>
+      </ScrollLink> */}
           
           </div>
         </div>
