@@ -119,6 +119,7 @@ section#About-section {
         width: 110%;
         margin: 50px 0 45px 0;
         padding-bottom: 15px;
+        height: 100%;
 
 
     }
@@ -129,7 +130,7 @@ section#About-section {
 
     .skills-pill {
         /* border: solid 0.5px; */
-       
+       height: 10vh;
         padding: 10px;
         border-radius: 18px;
         margin-right: 3px;
