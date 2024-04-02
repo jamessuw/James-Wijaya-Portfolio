@@ -366,3 +366,8 @@ section >h2 {
         clip-path: none;
 }
  }
+ @media screen and (max-width: 768px) {
+section{
+ scroll-snap-type: none;
+}
+ }
