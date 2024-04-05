@@ -76,6 +76,15 @@ input[type="text"] {
     font-size: 15px;
 }
 
+/*==========Fluffy container ============*/
+
+.fluffy-cntainer{
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+}
+
 @media screen and (max-width: 768px) {
 
 
