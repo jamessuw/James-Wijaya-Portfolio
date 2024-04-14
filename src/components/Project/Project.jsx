@@ -59,13 +59,13 @@ function Project() {
     {
       id: 1,
       title: 'Etome',
-      description: 'This is the description for Card 1.',
+      description: 'Etome is an Clothing brand that focused on the sustainable Material. Throught this project I have a chance to work with incradable brand that need of e-commerce website. So, me and the etome team collborate for the web design. After it being finished Ive build e-commerce Website for etome and althred and custome their web theme.Using Technologies such as SCSS, HTML, Liquid, and Javascript.',
       image: etome,
     },
     {
       id: 2,
       title: 'Unleash Health',
-      description: 'This is the description for Card 2.',
+      description: 'Unleash Health is a Global Heath Prevention. In this project i have a chance to work with amazing people and high skilled teams. I work closely with Ramin and Sebatian, To develop an app that would introduce World golbal helath prevention. I responsibility is to develop and maintain their software and Website. The technology that i used is HTML, CSS, Ruby.js, Tailwind, Git, and Wordpress ',
       image: unleashhealth,
     },
     {
@@ -77,7 +77,7 @@ function Project() {
     {
       id: 4,
       title: 'Meetbowl',
-      description: 'This is the description for Card 3.',
+      description: 'Meetbowl is an Indonesia Restaurant that located in South Melbourne. The Idea is to introduce Melbourne to one of the famouse Indonesian Cuisin called Bakso to Melbourne. I came out the Idea to develop a Webiste to expose their brand to digital World. I develop their Web Prototyped and work closely with their owner to ensure that the brand and the website are align. The Technology that I used are HTML, CSS, and Javascript. Furtheremore, to extend my service I do some basic SEO To make thair website rank nuber 1 on google.',
       image: meetbowl,
     },
     {

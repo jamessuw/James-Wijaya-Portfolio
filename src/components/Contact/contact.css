@@ -13,7 +13,10 @@
     text-align: left;
 
 
+
+
 }
+
 button.button-contactForm {
     margin-bottom: 15px;
     display: block;
@@ -78,7 +81,7 @@ input[type="text"] {
 
 /*==========Fluffy container ============*/
 
-.fluffy-cntainer{
+.fluffy-cntainer {
     height: 100%;
     width: 100%;
     display: block;
@@ -88,9 +91,9 @@ input[type="text"] {
 @media screen and (max-width: 768px) {
 
 
-#contact-section{
-    height: 100%;
-}
+    #contact-section {
+        height: 100%;
+    }
 
     .heading-project h2 {
         font-size: 2rem;
@@ -98,18 +101,22 @@ input[type="text"] {
         padding: 35px;
     }
 }
+
 form.--form-control--crad {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 65vh;
 }
+
 .blob {
     position: absolute;
 }
+
 button.button-contactForm {
     width: 100%;
 }
-.scroll-top-btn{
+
+.scroll-top-btn {
     width: 100%;
 }
