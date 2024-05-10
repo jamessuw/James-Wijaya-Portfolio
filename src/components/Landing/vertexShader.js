@@ -4,7 +4,7 @@ uniform float u_time;
 
 varying vec2 vUv;
 varying float vDisplacement;
-varying float vShadow;
+varying float vBorder;
 
 // Classic Perlin 3D Noise 
 // by Stefan Gustavson
@@ -89,27 +89,24 @@ float cnoise(vec3 P) {
     return 2.2 * n_xyz;
 }
 
-
-// End of Perlin Noise Code
-
-
-
-
-
-//Dynamic noise code 
-
-
 void main() {
     vUv = uv;
 
+    // Calculate Perlin noise for displacement
     vDisplacement = cnoise(position + vec3(2.0 * u_time));
   
-    vec3 newPosition = position + normal * (u_intensity * vDisplacement);
+    // Calculate border effect based on distance from the center
+    vBorder = smoothstep(0.9, 1.0, length(position.xy)); // Adjust values for border width
+
+    // Displace vertices based on Perlin noise and border effect
+    vec3 newPosition = position + normal * (u_intensity * vDisplacement * vBorder);
   
+    // Transform vertices to view space
     vec4 modelPosition = modelMatrix * vec4(newPosition, 1.0);
     vec4 viewPosition = viewMatrix * modelPosition;
     vec4 projectedPosition = projectionMatrix * viewPosition;
   
+    // Output the final vertex position
     gl_Position = projectedPosition;
 }
 `;

@@ -98,6 +98,12 @@ font-size: 3rem;
     pointer-events: auto;
 
   }
+  .project-container{
+    height: 100%;
+  }
+  .project-container .card{
+    width: 85%;
+  }
   
 #project-container{
     display: flex;
@@ -180,6 +186,8 @@ body:not(.mobile) .list-text:hover + .img-project img{
   border-radius: 20px;
 } */
 
+
+
 }
 
 
@@ -216,7 +224,7 @@ body:not(.mobile) .list-text:hover + .img-project img{
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 10px;
-  padding: 20px;
+  padding:10px 20px 10px 20px;
   width: 100%;
 }
 
@@ -268,6 +276,11 @@ padding: 15px;
  
   position: relative;
   overflow-y: hidden;
+}
+.container-pro {
+  display: flex;
+  flex-direction: column-reverse;
+  height: 100vh;
 }
 .project-list-container {
   margin: 0;

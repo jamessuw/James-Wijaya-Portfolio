@@ -22,6 +22,7 @@
 
 
 }
+
 span.index-module_type__E-SaG {
     display: none;
     width: 75%;
@@ -29,7 +30,7 @@ span.index-module_type__E-SaG {
 }
 
 .tagline-landing h1 {
-font-weight: 600;
+    font-weight: 600;
 }
 
 .pill-design {
@@ -70,6 +71,7 @@ font-weight: 600;
     display: flex;
 
 }
+
 .hover-text {
     width: 5vw;
     position: relative;
@@ -77,20 +79,36 @@ font-weight: 600;
     height: fit-content;
     right: 50%;
     color: white;
-    animation: hover-text , Pulsate 6s infinite;
+    animation: hover-text, Pulsate 6s infinite;
 
 }
-@keyframes hover-text
-{
-    from { transform: rotate(0deg) translateX(150px) rotate(0deg) }
-    to   { transform: rotate(360deg) translateX(150px) rotate(-360deg) }
+
+@keyframes hover-text {
+    from {
+        transform: rotate(0deg) translateX(150px) rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg) translateX(150px) rotate(-360deg)
+    }
 }
 
 @keyframes Pulsate {
-  from { opacity: 1; }
-  50% { opacity: 0; }
-  70% {opacity: 0.5;}
-  to { opacity: 1; }
+    from {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 
@@ -125,19 +143,20 @@ canvas {
 
 
 }
+
 .hover-text {
     transition: visibility 0.3s ease;
     cursor: pointer;
-  }
-  
-  .hover-text.hidden {
-    visibility: hidden!important;
-  }
-
-  span.hover-text {
-   visibility: hidden;
 }
-  
+
+.hover-text.hidden {
+    visibility: hidden !important;
+}
+
+span.hover-text {
+    visibility: hidden;
+}
+
 
 @media screen and (min-width: 1880px) {
 
@@ -182,7 +201,8 @@ canvas {
     flex-direction: column;
 
 }
-.spacing p{
+
+.spacing p {
     text-align: center;
 }
 
@@ -259,11 +279,11 @@ canvas {
 @media screen and (max-width: 988px) {
 
     .tagline-landing {
-      
-            top: 0;
-            text-align: center;
-           
-        
+
+        top: 0;
+        text-align: center;
+
+
     }
 
     .pill-design {
@@ -290,10 +310,11 @@ canvas {
         border-radius: 70px;
 
     }
+
     div#landing-container {
         background-color: #f5f5f5f5;
-        border-top-left-radius:80px;
-        border-top-right-radius:80px;
+        border-top-left-radius: 80px;
+        border-top-right-radius: 80px;
     }
 
     #landing-page {
@@ -314,6 +335,7 @@ canvas {
     .container-fluid {
         margin-top: 9px;
     }
+
     span.index-module_type__E-SaG {
         display: none;
         width: 100%;
@@ -351,26 +373,26 @@ canvas {
 
     }
 
-        .tagline-landing {
-            position: absolute;
-            /* position: relative; */
-            top: 52%;
-            z-index: 999;
-            color: #323030;
-            width: 86%;
-        
-        }
-    
+    .tagline-landing {
+        position: absolute;
+        /* position: relative; */
+        top: 52%;
+        z-index: 999;
+        color: #323030;
+        width: 86%;
+
+    }
+
 
     .container-text {
         display: flex;
-      
+
         text-align: center;
-   
-            position: relative;
-            top: 180px;
-            flex-direction: column;
-        
+
+        position: relative;
+        top: 180px;
+        flex-direction: column;
+
     }
 
 
@@ -389,10 +411,10 @@ canvas {
         font-size: 1rem;
         width: 290px;
     }
- 
+
     .hover-text {
 
         display: none;
-        
-        }
+
+    }
 }
