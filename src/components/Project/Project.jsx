@@ -103,6 +103,7 @@ function Project() {
         </div>
         <div className="container-2">
           {hoveredImage && <img src={hoveredImage} alt="Hovered Image" style={{ maxWidth: '100%' }} />}
+       
         </div>
       </div>
     </section>

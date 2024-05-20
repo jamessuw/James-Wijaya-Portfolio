@@ -243,6 +243,13 @@ padding: 15px;
 
 
   @media screen and (max-width: 768px) {
+    .container-1 {
+      padding: 15px !important;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+  }
     #project-section{
       width: var(--container-width-sm);
       display: flex!important;
@@ -320,6 +327,7 @@ span.heading-project-ul {
   text-align: center;
   margin-top: 25px;
 }
+
   
   }
   
