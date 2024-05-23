@@ -131,7 +131,8 @@ canvas{
     cursor: pointer;
     overflow: auto;
     pointer-events: none;
-    touch-action: auto;
+ 
+    width: 100%;
 }
 .loading-position{
     display: block;

@@ -298,7 +298,7 @@ span.hover-text {
 
     .binary-cube {
         display: flex;
-        height: 424px !important;
+        height: 500px !important;
         width: 100%;
         justify-content: center;
         position: relative;
@@ -307,7 +307,7 @@ span.hover-text {
 
     #landing-page {
         margin-top: 0px;
-        border-radius: 70px;
+ 
 
     }
 

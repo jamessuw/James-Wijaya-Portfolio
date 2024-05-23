@@ -245,8 +245,8 @@ padding: 15px;
   @media screen and (max-width: 768px) {
     .container-1 {
       padding: 15px !important;
-      justify-content: center;
-      align-items: center;
+      
+ 
       display: flex;
       flex-direction: column;
   }
