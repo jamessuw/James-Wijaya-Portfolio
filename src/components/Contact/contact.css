@@ -8,6 +8,9 @@
 
 
 }
+.heading-project h2{
+    text-align: left;
+}
 
 .heading-project {
     text-align: left;
@@ -103,7 +106,7 @@ input[type="text"] {
         text-align: left;
         padding: 35px;
     }
-}
+
 
 form.--form-control--crad {
     display: flex;
@@ -125,4 +128,5 @@ button.button-contactForm {
 }
 .heading-project h2{
     text-align: center;
+}
 }
