@@ -196,6 +196,7 @@ body:not(.mobile) .list-text:hover + .img-project img{
     /*===== new style ====*/
 .container-pro{
   display: flex;
+  height: 100vh;
 }
 .image-container{
   display: block;
@@ -217,16 +218,30 @@ body:not(.mobile) .list-text:hover + .img-project img{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  
 }
 
 .card {
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  padding:10px 20px 10px 20px;
+  margin: -30px;
   width: 100%;
+  padding-bottom: 0; /* Initial padding */
+  transition: padding 0.5s ease-in-out; /* Smooth transition for padding */
 }
+
+.card:hover {
+  background-color: #1d1d1d;
+  color: white;
+  padding: 10px 0px 50px 25px;
+  animation-delay: 2s; /* This doesn't have any effect in this context */
+  animation-direction: alternate-reverse; /* This doesn't have any effect in this context */
+}
+
+
+
+
 
 .card img {
   border-radius: 8px;
@@ -235,7 +250,7 @@ body:not(.mobile) .list-text:hover + .img-project img{
 }
 
 .card-content {
-  padding: 10px 0;
+  padding: 10px;
 }
 li.react-multi-carousel-item.react-multi-carousel-item--active.carousel-item-padding-40-px {
 padding: 15px;

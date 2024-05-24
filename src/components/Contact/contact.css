@@ -26,6 +26,7 @@ button.button-contactForm {
     height: 55px;
     background-color: #1d1d1d;
     border-radius: 18px !important;
+    width: 100%;
 }
 
 
