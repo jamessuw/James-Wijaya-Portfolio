@@ -257,6 +257,17 @@ padding: 15px;
 
 
   @media screen and (max-width: 768px) {
+
+    .card:hover {
+      -webkit-animation-delay: 2s;
+      animation-delay: 2s;
+      animation-direction: alternate-reverse;
+      background-color: #1d1d1d;
+      color: #fff;
+      padding: 10px 25px 50px 25px;
+  }
+
+
     .container-1 {
       padding: 15px !important;
       
