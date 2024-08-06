@@ -376,7 +376,7 @@ span.hover-text {
     .tagline-landing {
         position: absolute;
         /* position: relative; */
-        top: 52%;
+        top: 55%;
         z-index: 999;
         color: #323030;
         width: 86%;

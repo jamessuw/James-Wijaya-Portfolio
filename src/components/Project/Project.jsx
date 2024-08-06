@@ -14,31 +14,31 @@ const cardsData = [
   {
     id: 1,
     title: 'Etome',
-    description: '',
+    description: 'Custom coded Themes, Web Development, e-Commerce ',
     image: etome,
   },
   {
     id: 2,
     title: 'Unleash Health',
-    description: '',
+    description: 'Mobile App Dev, Web Development',
     image: unleashhealth,
   },
   {
     id: 3,
     title: 'Clear Dynamics',
-    description: 'This is the description for Card 3.',
+    description: 'Contract role Front end engineers / Full time, Web Development, Busniess system develpment  ',
     image: ClearDynamics,
   },
   {
     id: 4,
     title: 'Meetbowl',
-    description: 'Website, custom coded Themes',
+    description: 'Website, custom coded Themes, Web Development, Website',
     image: meetbowl,
   },
   {
     id: 5,
     title: 'PT.KumalaJingga',
-    description: 'Web Dev, Company portfolio',
+    description: 'Web Development, Website, custom coded Themes',
     image: kumala,
   },
 ];
