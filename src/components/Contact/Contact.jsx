@@ -41,11 +41,11 @@ function Contact() {
     <section id="contact-section">
       <span className="heading-project">
         <div className="singleLine">
-          <RevealAnimation>
+          {/* <RevealAnimation> */}
             <h2>
-              LET'S CONNECT & GET TO KNOW<br></br> EACH OTHER
+              GOT ANY PROJECT<br></br> THAT I CAN HELP YOU WITH?
             </h2>
-          </RevealAnimation>
+          {/* </RevealAnimation> */}
         </div>
       </span>
 

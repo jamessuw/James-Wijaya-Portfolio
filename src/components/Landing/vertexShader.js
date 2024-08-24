@@ -1,10 +1,15 @@
 const vertexShader = `
 uniform float u_intensity;
 uniform float u_time;
+uniform vec3 u_color; // New color uniform for dynamic coloring
+uniform float u_frequency; // Frequency uniform for adjustable frequency
+uniform float u_amplitude; // Amplitude for distortion
 
 varying vec2 vUv;
 varying float vDisplacement;
 varying float vBorder;
+varying vec3 vColor; // New varying to pass color information
+varying vec3 vNormal; // Varying to pass the normal vector
 
 // Classic Perlin 3D Noise 
 // by Stefan Gustavson
@@ -93,14 +98,23 @@ void main() {
     vUv = uv;
 
     // Calculate Perlin noise for displacement
-    vDisplacement = cnoise(position + vec3(2.0 * u_time));
-  
+    vDisplacement = cnoise(position * u_frequency + vec3(2.0 * u_time)); // Adjust frequency
+
     // Calculate border effect based on distance from the center
     vBorder = smoothstep(0.9, 1.0, length(position.xy)); // Adjust values for border width
 
+    // Calculate the normal distortion using Simplex noise
+    float distortion = cnoise(normal * u_frequency + vec3(u_time)) * u_amplitude;
+    vec3 distortedNormal = normalize(normal + distortion);
+    vNormal = normalize(normalMatrix * distortedNormal);
+
     // Displace vertices based on Perlin noise and border effect
-    vec3 newPosition = position + normal * (u_intensity * vDisplacement * vBorder);
-  
+    vec3 newPosition = position + distortedNormal * (u_intensity * vDisplacement * vBorder);
+
+    // Calculate color based on position and time for dynamic gradient
+    vec3 gradientColor = mix(vec3(1.0, 0.0, 0.0), vec3(0.0, 0.0, 1.0), sin(u_time) * 0.5 + 0.5);
+    vColor = gradientColor;
+
     // Transform vertices to view space
     vec4 modelPosition = modelMatrix * vec4(newPosition, 1.0);
     vec4 viewPosition = viewMatrix * modelPosition;

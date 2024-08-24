@@ -1,16 +1,12 @@
-import React, { useRef, useMemo, useState } from "react";
+import React, { useRef, useMemo, useState, useEffect } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
-import { MathUtils, Vector2 } from "three";
-import { DirectionalLight } from "three";
+import { MathUtils, Vector2, DirectionalLight, Color } from "three";
 import vertexShader from "./vertexShader";
 import fragmentShader from "./fragmentShader";
 
-// Import THREE namespace
-import * as THREE from 'three';
-
 function Blob() {
   const mesh = useRef();
-  const { camera } = useThree();
+  const { camera, scene } = useThree();
   const [dragging, setDragging] = useState(false);
   const [prevPosition, setPrevPosition] = useState(new Vector2());
 
@@ -39,44 +35,84 @@ function Blob() {
   };
 
   const hover = useRef(false);
-  const shouldCastShadow = useMemo(() => Math.random() < 8.5, []);
-  const shouldReceiveShadow = useMemo(() => Math.random() < 8.5, []);
+  const shouldCastShadow = useMemo(() => Math.random() < 0.85, []);
+  const shouldReceiveShadow = useMemo(() => Math.random() < 0.85, []);
 
-  // Set up lights
-  const lightTop = new DirectionalLight(0xFFFFFF, 0.5);
-  lightTop.position.set(0, 200, 200);
-  lightTop.castShadow = true;
-  const lightBottom = new DirectionalLight(0xFFFFFF, 0.15);
-  lightBottom.position.set(0, -200, 400);
-  lightBottom.castShadow = true;
-
-  const uniforms = useMemo(() => {
-    return {
-      u_time: { value: 0 },
-      u_intensity: { value: 0.3 },
-      u_color: { value: new THREE.Color(0xff0000) }, // Add a color uniform
-    };
+  // Setup lights
+  const lightTop = useMemo(() => {
+    const light = new DirectionalLight(0xffffff, 4.0);
+    light.position.set(0, 200, 200);
+    light.castShadow = true;
+    light.shadow.mapSize.width = 2048;
+    light.shadow.mapSize.height = 2048;
+    light.shadow.camera.near = 0.5;
+    light.shadow.camera.far = 500;
+    light.shadow.bias = -0.001;
+    return light;
   }, []);
+
+  const lightBottom = useMemo(() => {
+    const light = new DirectionalLight(0xffffff, 4.5);
+    light.position.set(0, -200, 400);
+    light.castShadow = true;
+    light.shadow.mapSize.width = 2048;
+    light.shadow.mapSize.height = 2048;
+    light.shadow.camera.near = 0.5;
+    light.shadow.camera.far = 500;
+    light.shadow.bias = -0.001;
+    return light;
+  }, []);
+
+  // Add lights to the scene
+  useEffect(() => {
+    scene.add(lightTop);
+    scene.add(lightBottom);
+    return () => {
+      scene.remove(lightTop);
+      scene.remove(lightBottom);
+    };
+  }, [scene, lightTop, lightBottom]);
+
+  const uniforms = useMemo(() => ({
+    u_intensity: { value: 1.0 },
+    u_amplitude: { value: 1.0 },
+    u_color: { value: new Color('black') },
+    gridSize: { value: 0 },
+    gridColor: { value: new Color(1.0, 1.0, 1.0) },
+    gridThickness: { value: 10.02 },
+    u_frequency: { value: 8.0 },
+    u_time: { value: 0.0 },
+    u_lightPosition: { value: lightTop.position },
+    u_viewPosition: { value: camera.position },
+  }), [lightTop.position, camera.position]);
 
   useFrame((state) => {
     const { clock } = state;
+    uniforms.u_frequency.value = Math.sin(clock.getElapsedTime()) * 3.0 + 4.0;
+    uniforms.u_time.value = 0.4 * clock.getElapsedTime();
+  
     if (mesh.current) {
       mesh.current.rotation.x += 0.004;
       mesh.current.rotation.y += 0.003;
-
+  
       mesh.current.material.uniforms.u_time.value = 0.4 * clock.getElapsedTime();
-
+  
       mesh.current.material.uniforms.u_intensity.value = MathUtils.lerp(
         mesh.current.material.uniforms.u_intensity.value,
         hover.current ? 1 : 0.15,
         0.02
       );
-
-      // Change color when hovered over
-      mesh.current.material.uniforms.u_color.value = hover.current ? new THREE.Color(0x00ff00) : new THREE.Color(0xff0000);
+  
+      mesh.current.material.uniforms.u_amplitude.value = hover.current ? 6.0 : 4.0;
+  
+      mesh.current.material.uniforms.u_color.value = hover.current ? new Color(0x00ff00) : new Color(0xff0000);
+      
+      // Update light and camera positions
+      uniforms.u_lightPosition.value.copy(lightTop.position);
+      uniforms.u_viewPosition.value.copy(camera.position);
     }
   });
-
+  
   return (
     <group>
       <mesh
@@ -93,7 +129,6 @@ function Blob() {
         style={{ pointerEvents: "auto" }}
       >
         <icosahedronGeometry args={[2, 20]} />
-        <meshPhongMaterial />
         <shaderMaterial
           vertexShader={vertexShader}
           fragmentShader={fragmentShader}
