@@ -37,7 +37,7 @@ const NavMenu = () => {
                     <h6>
                       <br /> DEVELOP IN JUNE 1, 2023
                       <br /> CURRENTLY BASED IN MELBOURNE
-                      <br /> 37.8136° S, 144.9631° E
+                      <br /> DEVELOP & DESIGN BY JAMES.SUW
                     </h6>
                   </span>
                 </span>

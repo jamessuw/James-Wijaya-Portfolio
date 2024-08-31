@@ -12,6 +12,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useState, CSSProperties } from "react";
 import PacmanLoader from "react-spinners/PacmanLoader";
 import Loading from "./components/Loading/Loading";
+import AnimatedCursor from "react-animated-cursor"
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -129,6 +130,18 @@ function App() {
 
   return (
     <div className={`App ${loading ? "loading" : ""}`}>
+      <AnimatedCursor
+     
+      innerSize={18}
+      outerSize={22}
+      color='0,0,240'
+      innerScale={1}
+      outerScale={2.7}
+      outerAlpha={0.5} // Set outerAlpha to a non-zero value for visibility
+      outerStyle={{
+        mixBlendMode: 'exclusion'
+      }}
+    />
       <Loading active={loading} percentage={percentage} />
       {!loading && (
         <>

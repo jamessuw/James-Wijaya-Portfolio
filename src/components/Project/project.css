@@ -223,11 +223,12 @@ body:not(.mobile) .list-text:hover + .img-project img{
 
 .card {
   border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
-  padding-bottom: 0; /* Initial padding */
-  transition: padding 0.5s ease-in-out; /* Smooth transition for padding */
+  padding-bottom: 0;
+  transition: padding 0.5s ease-in-out;
+  border-bottom: solid 0.5px rgb(191, 191, 191);
+  
+
 }
 
 .card:hover {

@@ -8,6 +8,17 @@
 
 
 }
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+    flex-direction: column;
+  }
+
 .heading-project h2{
     text-align: left;
 }
@@ -40,7 +51,7 @@ button.button-contactForm {
 form.--form-control--crad {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    width: 100%;
     height: 55vh;
     justify-content: space-between;
 }

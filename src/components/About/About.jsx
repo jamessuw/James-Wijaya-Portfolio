@@ -196,7 +196,7 @@ function About() {
                 />
                 <Model position={[0.025, -0.9, 0]} /> /* highlight-line */
               </Suspense>
-              <OrbitControls autoRotate={false} enableZoom={false} />
+              <OrbitControls autoRotate={true} enableZoom={false} />
             </Canvas>
           </div>
         </div>

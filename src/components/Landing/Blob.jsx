@@ -127,6 +127,7 @@ function Blob() {
         castShadow={shouldCastShadow}
         receiveShadow={shouldReceiveShadow}
         style={{ pointerEvents: "auto" }}
+        wireframe={true}
       >
         <icosahedronGeometry args={[2, 20]} />
         <shaderMaterial

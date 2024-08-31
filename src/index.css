@@ -36,6 +36,12 @@
 html{
     /* scroll-behavior: smooth!important; */
     user-select: none;
+    --cursor-color: #00000;
+   
+     
+      
+
+
 }
 a{
     transition:all 0.5 ease;
@@ -164,18 +170,20 @@ canvas{
     /* flex-direction: column; */
 
 }
-h1,h2,h3,h4,h5{
+h1, h2, h3, h4, h5 {
     font-weight: 500;
     font-family: 'Inter', sans-serif;
 }
-h6{
-    font-size: 12px;
-    font-weight:600;
 
-}
-h1{
-    font-size: 2.5rem;
+h6 {
+    font-size: 12px;
     font-weight: 600;
+}
+
+h1 {
+    font-size: 2.5rem; /* or use vw for more responsiveness */
+    font-weight: 600;
+
 
 /* }
 section{
@@ -344,6 +352,46 @@ section >h2 {
     
 }
   }
+
+  @media (max-width: 1200px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h6 {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 992px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h6 {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h6 {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    h6 {
+        font-size: 7px;
+    }
+}
  /*=========================== Media Queries (Small Device) =================*/
  @media screen and (max-width :1024px){
 

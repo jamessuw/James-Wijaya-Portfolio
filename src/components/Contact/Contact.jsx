@@ -107,7 +107,7 @@ function Contact() {
         </div>
 
         <div className="container-1">
-          <div>
+          <div className="form-container">
             <form
               ref={form}
               onSubmit={sendEmail}
