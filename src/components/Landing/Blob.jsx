@@ -9,6 +9,32 @@ function Blob() {
   const { camera, scene } = useThree();
   const [dragging, setDragging] = useState(false);
   const [prevPosition, setPrevPosition] = useState(new Vector2());
+  const [blobScale, setBlobScale] = useState(1.8); // Default scale for desktop
+
+  // Handle window resize
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      
+      // Adjust scale based on screen width (768px is the mobile threshold)
+      if (width < 768) {
+        setBlobScale(1.7);  // Smaller blob on mobile
+      } else {
+        setBlobScale(1.8);  // Default size on larger screens
+      }
+    };
+
+    // Add event listener for resize
+    window.addEventListener('resize', handleResize);
+
+    // Call once to set the initial scale
+    handleResize();
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const handlePointerDown = (event) => {
     event.stopPropagation();
@@ -117,7 +143,7 @@ function Blob() {
     <group>
       <mesh
         ref={mesh}
-        scale={1.8}
+        scale={blobScale}  // Use the responsive scale state
         position={[0, 0, 0]}
         onPointerOver={() => (hover.current = true)}
         onPointerOut={() => (hover.current = false)}

@@ -55,6 +55,13 @@ void main() {
     // Apply grid color
     color = mix(color, gridColorFinal, grid);
 
+    // Shadow effect: dark area below the blob
+    float shadowIntensity = smoothstep(0.0, 0.3, vUv.y); // Adjust shadow falloff
+    vec3 shadowColor = vec3(0.0, 0.0, 0.0); // Black shadow color
+
+    // Mix shadow with base color
+    color = mix(color, shadowColor, shadowIntensity * 0.5); // Blend shadow with color
+
     // Set the final color with transparency
     float fresnel = 0.5 + 0.8 * pow(5.0 - abs(vUv.y), 10.0);
     gl_FragColor = vec4(color, 1.0);
@@ -62,9 +69,7 @@ void main() {
     // Apply transparency based on distortion
     gl_FragColor.a = max(0.0, 9.0 - distort) * fresnel; // Adjust transparency
 }
-
-
-
 `;
 
 export default fragmentShader;
+

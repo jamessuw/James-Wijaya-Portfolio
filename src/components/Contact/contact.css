@@ -4,10 +4,11 @@
     border-top-left-radius: 60px 70px;
     border-top-right-radius: 60px 70px;
     box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
-    height: 100vh;
-
-
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
 }
+
 .form-container {
     display: flex;
     justify-content: center;
@@ -17,63 +18,48 @@
     max-width: 600px;
     width: 100%;
     flex-direction: column;
-  }
-
-.heading-project h2{
-    text-align: left;
 }
 
-.heading-project {
+.heading-project h2 {
+    font-size: 3rem;
     text-align: left;
-
-
-
-
+    padding: 35px;
+    margin: 0;
 }
 
 button.button-contactForm {
     margin-bottom: 15px;
-    display: block;
     height: 55px;
     background-color: #1d1d1d;
     border-radius: 18px !important;
     width: 100%;
-}
-
-
-.heading-project h2 {
-    font-size: 5rem;
-    text-align: left;
-    padding: 35px;
-
+    font-size: 1rem;
 }
 
 form.--form-control--crad {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 55vh;
+    min-height: 55vh;
     justify-content: space-between;
 }
 
 input[type="text"] {
-    margin: 0px;
+    margin: 0;
     height: 5vh;
     padding: 20px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-    pointer-events: fill;
-
-
+    box-sizing: border-box;
+    font-size: 1rem;
 }
-
 
 .text-area-form {
     padding: 15px;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-    pointer-events: fill;
-
+    box-sizing: border-box;
+    font-size: 1rem;
 }
 
 .container-abstracts {
@@ -82,16 +68,13 @@ input[type="text"] {
 }
 
 .container-abstract div#ball-1 {
-
-
-
-
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .tag-contact {
     font-size: 15px;
+    text-align: left;
 }
 
 /*==========Fluffy container ============*/
@@ -103,42 +86,83 @@ input[type="text"] {
     position: absolute;
 }
 
+/*========== Media Queries for Responsiveness ===========*/
+@media screen and (max-width: 1200px) {
+    .heading-project h2 {
+        font-size: 4rem;
+    }
+
+    form.--form-control--crad {
+        min-height: 50vh;
+    }
+}
+
 @media screen and (max-width: 768px) {
+    .heading-project h2 {
+        font-size: 2.5rem;
+        text-align: center;
+        padding: 20px;
+    }
+
+    form.--form-control--crad {
+        min-height: 45vh;
+    }
+
+    input[type="text"], .text-area-form {
+        padding: 15px;
+        height: auto;
+    }
 
     p.tag-contact.reveal {
         text-align: center;
     }
 
+    .blob {
+        position: absolute;
+    }
+}
+
+@media screen and (max-width: 480px) {
     #contact-section {
-        height: 100%;
+        padding: 15px;
+        border-top-left-radius: 30px 35px;
+        border-top-right-radius: 30px 35px;
     }
 
     .heading-project h2 {
         font-size: 2rem;
-        text-align: left;
-        padding: 35px;
+        padding: 15px;
     }
 
+    form.--form-control--crad {
+        min-height: 40vh;
+    }
 
-form.--form-control--crad {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 65vh;
-}
+    input[type="text"], .text-area-form {
+        padding: 10px;
+    }
 
-.blob {
-    position: absolute;
-}
-
-button.button-contactForm {
-    width: 100%;
+    button.button-contactForm {
+        height: 50px;
+        font-size: 0.9rem;
+    }
 }
 
-.scroll-top-btn {
-    width: 100%;
+/* Extra media query to ensure readability on MacBook Pro Retina displays */
+@media screen and (min-width: 1280px) and (max-width: 1440px) {
+    .heading-project h2 {
+        font-size: 3.5rem;
+    }
+
+    form.--form-control--crad {
+        min-height: 50vh;
+    }
 }
-.heading-project h2{
-    text-align: center;
-}
+
+/* Ensure proper scaling on iOS devices */
+@supports (-webkit-appearance: none) and (color: transparent) {
+    html {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
 }

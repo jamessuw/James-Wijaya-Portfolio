@@ -222,7 +222,7 @@ function About() {
               </p>
             </RevealContainer>
 
-            <div className="skills-container">
+            {/* <div className="skills-container">
             
               <span className="skills-pill"><img className="skill-img" src={html5Logo} alt="HTML5 Logo" /></span>{" "}
               <span className="skills-pill"> <img className="skill-img"src={cssLogo} alt="CSS Logo" /></span>{" "}
@@ -232,7 +232,7 @@ function About() {
               <span className="skills-pill"> <img className="skill-img"src={github} alt="github Logo" /></span>{" "}
               <span className="skills-pill"> <img className="skill-img"src={gitlab} alt="git lab Logo" /></span>{" "}
               <span className="skills-pill"> <img className="skill-img"src={figma} alt="figma Logo" /></span>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
